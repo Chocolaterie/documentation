@@ -18,3 +18,12 @@ Donc créer une class **DAOMealImplJPA** qui va implémenter l'interface **DAOMe
 
 Et donc dans la classe **DAOFactory** il sera possible de switcher entre **DAOMealImpl** et **DAOMealImplJPA** dans la méthode **getDAOMeal**
 
+![Persistence file location](img/tp_schema.png)
+
+:::danger Rappel important
+
+Attention vous devez avoir un **constructeur vide** d'existant dans vos classes lorsque vous utilisez la sérialisation
+
+Et utiliser le constructeur vide par défaut dans le code du Servlet pour les modèles.
+
+:::
