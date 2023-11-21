@@ -69,8 +69,72 @@ public class Address {
 	public int id;
 	
 	public String libelle;
-	
+
+	/** C'est dans le cas d'une relation bidirectionnelle */
 	@OneToOne(mappedBy="address", cascade = CascadeType.ALL)
 	public Person person;
+}
+```
+
+## One To Many
+
+La relation **OneToMany** peut se traduire par :
+
+> Un Objet A posséde **plusieurs** Objet B
+> 
+> **Des** Objet B sont possédés par un Objet A
+
+Cela pourrait être réprésenté sous la forme de ce schéma
+
+![Persistence file location](img/1_n_schema.png)
+
+### Classe Company
+
+```java
+@Entity
+public class Company {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int id;
+	
+	public String name;
+	
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+	@JoinColumn(name="Company_id")
+	public List<Employee> employees;
+	
+}
+```
+
+### Classe Employee
+
+```java
+@Entity
+public class Employee {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int id;
+	
+	public String lastname;
+	public String firstname;
+	
+	/**
+	 * Constructeur vide par défaut
+	 */
+	public Employee() {
+	}
+	
+	/**
+	 * Constructeur avec nom et prénom (attention pas d'id)
+	 * @param lastname
+	 * @param firstname
+	 */
+	public Employee(String lastname, String firstname) {
+		super();
+		this.lastname = lastname;
+		this.firstname = firstname;
+	}
 }
 ```
