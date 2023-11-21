@@ -1,0 +1,76 @@
+---
+sidebar_position: 4
+---
+
+# Les associations
+
+Elles permettent de manipuler les objets à l'aide des jointures.
+
+Il existe plusieurs type d'associations
+
+Une **association** se définit par :
+- Sa cardinalité
+- Sa direction (unidirectionnelle ou bidirectionnelle)
+
+Il existe **4 cardinalités** : 
+- OneToOne
+- OneToMany
+- ManyToOne
+- ManyToMany
+
+## One To One
+
+La relation **OneToOne** peut se traduire par :
+
+> Un Objet A posséde un Objet B
+> 
+> Un Objet B est possédé par un Objet A
+
+Cela pourrait être réprésenté sous la forme de ce schéma
+
+![Persistence file location](img/1_1_schema.png)
+
+### Classe Person
+
+```java
+@Entity
+public class Person {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int id;
+	
+	public String firstname;
+	public String lastname;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@Basic(fetch = FetchType.LAZY)
+	public Address adresse;
+	
+
+	public Address getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(Address adresse) {
+		this.adresse = adresse;
+	}
+}
+```
+
+### Classe Address
+
+```java
+@Entity
+public class Address {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	public int id;
+	
+	public String libelle;
+	
+	@OneToOne(mappedBy="address", cascade = CascadeType.ALL)
+	public Person person;
+}
+```
