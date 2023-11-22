@@ -12,7 +12,7 @@ Suite TP Suivis Repas
 
 ## Enonce
 
-En vous basant sur la Demo du module 6, vous allez ajouter une page de connexion dans le TP-Suivis-Repas (fil rouge)
+En vous basant sur la Demo du module 6, vous allez ajouter une page de connexion dans le TP-SuivisDesRepas (fil rouge)
 
 - Page **login-page.jsp** à creer
 - Avoir une classe **User** avec l'**email** et le **pseudo**
@@ -27,7 +27,7 @@ En vous basant sur la Demo du module 6, vous allez ajouter une page de connexion
 
 <u>Si vous êtes connecté :</u>  afficher le texte "Vous êtes connecté(e) [le pseudo de l'user]" et le bouton/lien pour se deconnecter
 
-<u>Sinon :</u>  afficher le texte "Vous êtes déconnecté(e)" et le bouton/lien pour se connecter
+<u>Sinon :</u>  afficher le texte "Vous êtes déconnecté(e)" et le bouton/lien pour allez sur la page de connexion
 
 :::info Note
 
@@ -42,6 +42,12 @@ Lien de la doc [Documentation UIKit Button](https://getuikit.com/docs/button)
 Pour **login-page.jsp** vous pouvez copier coller **page_meal_from.jsp**
 
 Ensuite adapter pour un formulaire de connexion
+
+:::warning Attention
+
+La propriété **action** dans la balise **form** doit être adaptée en conséquence aussi ! (doit cibler l'url de la servlet login)
+
+:::
 
 ### A ne pas oublier
 
