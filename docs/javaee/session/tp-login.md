@@ -20,7 +20,22 @@ En vous basant sur la Demo du module 6, vous allez ajouter une page de connexion
 - **ServletLogout** à créer
 
 ### Schema processus
+
 ![Diagram](img/diagram_sequence.png)
+
+### Sur la page d'Accueil
+
+<u>Si vous êtes connecté :</u>  afficher le texte "Vous êtes connecté(e) [le pseudo de l'user]" et le bouton/lien pour se deconnecter
+
+<u>Sinon :</u>  afficher le texte "Vous êtes déconnecté(e)" et le bouton/lien pour se connecter
+
+:::info Note
+
+Pour les liens "Se connecter" et "Se deconnecter" vous utiliserez la balise **a** mais avec la classe de **uikit** (uk-button uk-button-default) pour 
+donner aux liens l'appareance d'un boutton 
+
+Lien de la doc [Documentation UIKit Button](https://getuikit.com/docs/button)
+:::
 
 ### Astuces
 
