@@ -8,7 +8,7 @@ Suite TP Suivis Repas
 
 > **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les vidéos des modules 1 à 10 et d’avoir réalisé les TP proposés.
 
-**Durée Estimée : 1h**
+**Durée Estimée : 40min**
 
 ## Enonce
 
