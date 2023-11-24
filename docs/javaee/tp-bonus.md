@@ -38,11 +38,46 @@ En gros un objet avec un **id non null** persisté effectue un **update** au lie
 
 ![Diagram](img/schema_update_meal.png)
 
-### Feature : Supprimer d'un Repas
+### Feature : Suppression d'un Repas
+
+En JPA, il faut envoyer l'objet dans la méthode **remove** de l'**EntityMananger**
+Donc récupérer l'objet Repas via l'id avant. 
 
 ![Diagram](img/schema_delete_meal.png)
 
 ### Feature : Connexion (un plus avancée)
+
+Il faut récupérer une utilisateur via une requête avec plusieurs conditions.
+
+```java
+// les attributs a tester
+String monAttribut = "Test";
+String monAutreAttribut = "Un autre Test";
+
+// la construction de la requête
+CriteriaBuilder criteriaBuilder = entityManager.getCriteriaBuilder();
+CriteriaQuery<Objet> criteriaQuery = criteriaBuilder.createQuery(Objet.class);
+Root<Objet> root = criteriaQuery.from(Objet.class);
+
+Predicate condition = criteriaBuilder.and(
+    criteriaBuilder.equal(root.get("monAttribut"), nomRecherche),
+    criteriaBuilder.equal(root.get("monAutreAttribut"), monAutreAttribut)
+);
+
+criteriaQuery.select(root).where(condition);
+
+TypedQuery<Objet> query = entityManager.createQuery(criteriaQuery);
+// récupérer le result
+Objet resultat = query.getSingleResult();
+```
+
+:::info Note
+
+Bien sûr vous devez remplacer le type **Objet** par votre objet (exemple : **User**) 
+
+Et adapter le code selon votre besoin
+
+:::
 
 ![Diagram](img/schema_login.png)
 
