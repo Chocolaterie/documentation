@@ -27,6 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+         with:
+          node-version: '20'
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
@@ -42,6 +44,7 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
+          node-version: '20'
           github_token: ${{ secrets.MY_TOKEN }}
           # Build output to publish to the `gh-pages` branch:
           publish_dir: ./build
