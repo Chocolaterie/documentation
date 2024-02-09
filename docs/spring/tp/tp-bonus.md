@@ -34,7 +34,7 @@ Une fois que vous avez compris cela, assurez-vous que ce **RestController** poss
 ### Tips
 
 - Il faut recréer le model Movie avec ses associatons cotés Angular en Typescript (pas d'annotations ou ORM)
-- Une page sera un composant (ng-generate-page) : https://angular.io/guide/component-overview
+- Une page sera un composant (ng generate component) : https://angular.io/guide/component-overview
 - Les données du Back (Spring web) vont être récupérer via un Service angular : https://angular.io/tutorial/tour-of-heroes/toh-pt4
 - Utiliser le ngFor pour boucler la liste des films récupérer : https://guide-angular.wishtack.io/angular/composants/ngfor
 
