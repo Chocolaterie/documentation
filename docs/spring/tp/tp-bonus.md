@@ -37,3 +37,13 @@ Une fois que vous avez compris cela, assurez-vous que ce **RestController** poss
 - Une page sera un composant (ng-generate-page) : https://angular.io/guide/component-overview
 - Les données du Back (Spring web) vont être récupérer via un Service angular : https://angular.io/tutorial/tour-of-heroes/toh-pt4
 - Utiliser le ngFor pour boucler la liste des films récupérer : https://guide-angular.wishtack.io/angular/composants/ngfor
+
+### Instruction mise en place Angular
+
+- Installer la dernière version LTS de Node : https://nodejs.org/en
+- Installer Angular : npm install -g @angular/cli
+- Dans un dossier où vous souhaitez créer un projet Angular : ng new nom_du_projet
+- Lors de l'installation, sélectionnez SCSS, SASS ou LESS selon vos préférences
+- Ouvrir VSCode et installer l'extension Angular Essentials (et éventuellement Angular Snippets) depuis le Marketplace VSCode
+- Ouvrir votre projet Angular via VSCode (en ouvrant le dossier racine du projet créé)
+- Pour lancer le projet, ouvrez une fenêtre de commande et exécutez : ng serve
