@@ -15,6 +15,12 @@ sidebar_position: 6
 - l'url de l'api sera : `http://localhost:3000/articles`
 - Créer le model (classe) **Article**
 
+:::warning Attention !
+
+L'appli Angular est totalement séparé du projet NodeJS (un autre Dossier)
+
+:::
+
 ## Etape 2
 
 Un formulaire **Angular** pour ajouter **Article** depuis ton **API NodeJS**
