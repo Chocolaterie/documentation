@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# TP Artice API (Partie 1)
+# TP Article API (Partie 1)
 
 > **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les vidéos des modules 1 à 4 et d’avoir réalisé les TP proposés.
 
