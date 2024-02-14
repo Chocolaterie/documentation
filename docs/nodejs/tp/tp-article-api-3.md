@@ -26,6 +26,8 @@ Dans votre code :
 
 Il n y'a pas de **slug** dans ce TP, on reste sur l'utilisation des **id**
 
+l'id est un type **Number** et non **String**
+
 :::
 
 :::warning Conseil
