@@ -30,7 +30,7 @@ l'id est un type **Number** et non **String**
 
 :::
 
-:::warning Conseil
+:::info Conseil
 
 Laisser les faux **articles** en mémoire tant que le TP n'est pas fini.
 
