@@ -21,6 +21,7 @@ Fonctionnalités :
 # Ecran de connexion
 
 Le titre de la page : Connexion
+
 Les champs :
 - Email
 - Mot de passe
@@ -29,6 +30,7 @@ Les champs :
 # Ecran d'inscription
 
 Le titre de la page : Inscription
+
 Les champs :
 - Pseudo
 - Email
@@ -42,6 +44,7 @@ Les champs :
 # Ecran mot de passe oublié
 
 Le titre de la page : Récuperation de mot de passe
+
 Les champs :
 - Email
 - Bouton : Envoyer le lien de récupération
