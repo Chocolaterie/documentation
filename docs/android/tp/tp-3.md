@@ -21,4 +21,4 @@ Lors de la soumission du formulaire, afficher dans une **dialog** un résumé de
 
 ## Page récupération mot de passe
 
-Lors de la soumission du formulaire, afficher dans une **dialog** : "Un mail de récupération à été envoyé à ${email_saisie}"
+Lors de la soumission du formulaire, afficher dans une **dialog** : "Un mail de récupération à été envoyé à email_saisie"
