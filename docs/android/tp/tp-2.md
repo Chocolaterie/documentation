@@ -16,6 +16,6 @@ Dans ce TP vous allez voir :
     - un **TextView** pour mot de passe oublié => naviguer sur la page recupération de mot de passe
     - un **TextView** pour s'inscrire => naviguer sur la page inscription
 
-# Difficulté
+### Difficulté
 
 La difficulté principale de ce TP est de stylisé le TextView pou ravoir une apparence **clickable** comme des lien HTML.
