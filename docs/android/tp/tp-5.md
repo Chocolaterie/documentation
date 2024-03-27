@@ -4,11 +4,11 @@ sidebar_position: 5
 
 # TP Android - Partie 05
 
-> **Durée Estimée : Inderterminé (4h) **
+> **Durée Estimée : Indeterminée (4h) **
 
 ## Enoncé
 
-Adapté le TP actuel avec un web service.
+Adapter le TP actuel avec un web service.
 
 ### Back-End (API)
 
@@ -16,7 +16,7 @@ Créer une **web app api** en **NodeJs** avec **Express** (comme dans la démo)
 
 Il faut le modèle Movie
 
-Il faut les root (par ordre de difficulté/priorité):
+Il faut les routes (par ordre de difficulté/priorité):
 
 - getAll : Récupérer la liste des films
 - geById : Récupérer le film par son id
@@ -31,7 +31,7 @@ app.use(cors());
 
 :::warning Attention !!!
 
-Testez les web service via votre swagger avant de faire le front
+Testez les web service via votre Swagger avant de faire le front
 
 :::
 
@@ -42,7 +42,7 @@ Testez les web service via votre swagger avant de faire le front
 - Le UX de chaque film : Boutons (voir, editer, supprimer)
     - voir : afficher une page avec le détail du film
     - editer : Ouvrir le formulaire Film en mode edition
-    - supprimer : Appel API et rafrachir la liste
+    - supprimer : Appel API et rafraichir la liste
 
 :::warning Attention !!!
 

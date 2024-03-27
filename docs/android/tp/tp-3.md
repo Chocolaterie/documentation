@@ -8,7 +8,7 @@ sidebar_position: 3
 
 ## Enoncé
 
-Dans les 3 pages, afficher une boîte de dialogue lors que vous **soumettez** formulaire.
+Dans les 3 pages, afficher une boîte de dialogue lorsque vous **soumettez** formulaire.
 
 ## Page login
 
@@ -21,4 +21,4 @@ Lors de la soumission du formulaire, afficher dans une **dialog** un résumé de
 
 ## Page récupération mot de passe
 
-Lors de la soumission du formulaire, afficher dans une **dialog** : "Un mail de récupération à été envoyé à email_saisie"
+Lors de la soumission du formulaire, afficher dans une **dialog** : "Un mail de récupération a été envoyé à email_saisi"

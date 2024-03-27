@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Enoncé
 
-Les 3 fichiers xml crées ne sont pas encore liées à leur activités respectivent
+Les 3 fichiers xml créés ne sont pas encore liés à leurs activités respectives
 
 Dans ce TP vous allez voir :
 - Associer chaque page xml à une **Activity**
@@ -18,4 +18,4 @@ Dans ce TP vous allez voir :
 
 ### Difficulté
 
-La difficulté principale de ce TP est de stylisé le TextView pou ravoir une apparence **clickable** comme des lien HTML.
+La difficulté principale de ce TP est de styliser le TextView pour avoir une apparence **clickable** comme des liens HTML.

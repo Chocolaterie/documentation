@@ -20,8 +20,8 @@ sidebar_position: 4
 
 :::warning Attention
 
-Pour l'instant les films sont des listes initialisés en brut (des faux films)
+Pour l'instant les films sont des listes initialisées en brut (des faux films)
 
-La page et la cellule doit être en **DataBinding**
+La page et la cellule doivent être en **DataBinding**
 
 :::
