@@ -37,7 +37,7 @@ Créer les classes ViewModel pour les écrans correspondants :
 - RegisterViewModel
 - ResetPasswordViewModel
 
-Ces 3 classes doivent être associées dans chacunes des vues respectives (<data><variable>)
+Ces 3 classes doivent être associées dans chacunes des vues respectives (data et variable)
 
 :::warning Attention !!!
 
