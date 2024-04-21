@@ -2,9 +2,9 @@
 sidebar_position: 3
 ---
 
-# TP Article API (Partie 3)
+# TP Eni Store API (Partie 3)
 
-> **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les vidéos des modules 1 à 3 et d’avoir réalisé les TP proposés.
+> **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les modules 1 à 3 et d’avoir réalisé les TP proposés.
 
 **Durée Estimée : 1H**
 
