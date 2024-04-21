@@ -1,0 +1,34 @@
+[{
+  "_id": {
+    "$oid": "65fc06f0223a287b27d32a82"
+  },
+  "title": "L'article de Marius",
+  "content": "On dit Cholatine et non pain au chocolat bande de fous !",
+  "uid": "c8a3afc8-6aaa-4c4c-916c-a7d62e04eded"
+},
+{
+  "_id": {
+    "$oid": "65fc06f0223a287b27d32a83"
+  },
+  "title": "L'article de Jeremy",
+  "content": "Jerome n'est pas d'accord avec Anthony",
+  "uid": "a2c3afc8-6aaa-4c4c-916c-a7d62e02bdad"
+},
+{
+  "_id": {
+    "$oid": "6625714f1b22eb2a259c262e"
+  },
+  "uid": "26ebb48f-7c3d-4756-b45b-06b28a79ba24",
+  "title": "BeurreDoux",
+  "content": "C'est Nantais",
+  "_class": "tp.enistore.bo.Article"
+},
+{
+  "_id": {
+    "$oid": "662585931b22eb2a259c2641"
+  },
+  "uid": "c7a3afc8-6aaa-4c4c-916c-a7d62e02eded",
+  "title": "La Bretagne",
+  "content": "Affiche présentant Nantes",
+  "_class": "tp.enistore.bo.Article"
+}]
