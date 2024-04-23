@@ -21,6 +21,10 @@ Il sera nécessaire de créer les éléments suivants :
 - **ArticleService** : La couche métier (ou service/BLL) qui fera appel à la **DAO**
 - **ArticleRestController** : Ce contrôleur contiendra les **routes API** pour le CRUD d'un article (donc 3 routes)
 
+Un article contient au moins:
+- Id
+- Title
+
 :::warning Rappel
 
 - On ne réalise pas le POST car cela nécessiterait des configurations de sécurité pour autoriser l'envoi de données dans le corps de la requête (CSRF, CORS, etc.)
