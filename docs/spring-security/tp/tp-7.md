@@ -10,13 +10,13 @@ sidebar_position: 7
 
 ## Enonce
 
-Vous allez vous baser sur la démo pour mettre en place le système JWT. Il y'a pas mal de classe à créer et un peu de configuration Spring Security à faire alors soyez attentif lorsque vous repliqué la Demo sur le TP.
+Vous allez vous baser sur la démo pour mettre en place le système JWT. Il y a plusieurs classes à créer et quelques configurations à effectuer dans Spring Security, donc veillez à être attentif lorsque vous reproduisez la démo dans le TP.
 
-Etant donné que nous n'utilisons plus BasicAuth il faut supprimer le code qui authentifiais l'user en BasicAuth
+Étant donné que nous n'utilisons plus BasicAuth, il est nécessaire de supprimer le code qui authentifiait l'utilisateur avec BasicAuth.
 
 :::warning Être minutieux
 
-Il ne faut pas se perdre dans les classes et les méthodes. Soyez extrêmement attentif, prenez votre temps pour relire et ne pas oublier les annotations et les noms de fonction à peut-être adapter !
+Il est essentiel de ne pas se perdre dans les classes et les méthodes. Soyez extrêmement attentif, prenez votre temps pour relire et assurez-vous de ne pas oublier les annotations ainsi que les noms de fonctions à éventuellement adapter !
 
 La majorité des erreurs que vous allez rencontrer seront de cet ordre !
 
