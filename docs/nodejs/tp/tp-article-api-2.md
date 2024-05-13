@@ -67,6 +67,8 @@ Via Postman vous testerez par exemple l'url (en **POST**) :
 
 Dans le cadre d'un **POST** on veut envoyer un article, donc n'oubliez pas de paramétrer correctement l'appel comme affiché ci-dessus
 
+Ne pas oublier le app.use(express.json())
+
 :::
 
 

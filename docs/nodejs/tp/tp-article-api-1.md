@@ -39,6 +39,7 @@ Vous afficherez les messages via l'instruction suivante (et non **console.log**)
 
 ```js
 res.send(`Mon message`)
+res.json({message: `Mon message`})
 :::
 
 :::warning Rappel !
