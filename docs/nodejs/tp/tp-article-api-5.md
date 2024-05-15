@@ -15,9 +15,9 @@ Mettre en place une authentification JWT (avec couple email/password) et sécuri
 - POST : save-article
 - DELETE : /article/:id
 
-### Authentifcation
+### Authentification
 
-L'authentifcation (couple email/password + generation token si valide) se fera via :
+L'authentification (couple email/password + generation token si valide) se fera via :
 - /auth en POST
 
 Exemple de retour possible quand c'es tvalide :
