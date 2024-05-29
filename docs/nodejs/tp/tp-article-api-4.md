@@ -56,7 +56,7 @@ Appliquer cette méthodologie dans toutes vos routes !
 200 | Article modifié avec succès | L'article JSON 
 
 #### Si le titre existe déjà en base
-701 | Impossible de modifier un article avec un titre déjà existant | Null
+701 | Impossible de modifier un article dont un autre article possède un titre similaire | Null
 
 #### Si contrôle de surface invalide
 710 | Contrôle de surface non valide | La liste des erreurs en JSON
