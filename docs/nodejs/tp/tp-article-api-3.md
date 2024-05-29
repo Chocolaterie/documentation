@@ -24,9 +24,10 @@ Dans votre code :
 
 :::warning Ne pas oublier !
 
-Il n y'a pas de **slug** dans ce TP, on reste sur l'utilisation des **id**
+Deux choix :
 
-l'id est un type **Number** et non **String**
+- Soit `id` est un type **Number** (donc pas d'auto increment natif)
+- Soit **String** c'est `uid` et généré grâce à `uuid.v4()`
 
 :::
 
