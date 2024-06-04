@@ -20,7 +20,7 @@ Mettre en place une authentification JWT (avec couple email/password) et sécuri
 L'authentification (couple email/password + generation token si valide) se fera via :
 - /auth en POST
 
-Exemple de retour possible quand c'es tvalide :
+Exemple de retour possible quand c'est valide :
 
 ```js
 {
