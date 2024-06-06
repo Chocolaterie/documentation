@@ -16,8 +16,8 @@ Proposition :
 
 - /routes/article-routes.js
 - /routes/auth-routes.js
-- shared/middlewares.js
-- shared/helpers.js
+- /shared/middlewares.js
+- /shared/helpers.js
 - /mongoose/mongoose-config.js
 - /mongoose/models/mongoose-article.js
 - /mongoose/models/mongoose-user.js
