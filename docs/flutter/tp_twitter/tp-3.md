@@ -76,18 +76,3 @@ class AppTheme {
 
       ...
 ```
-
-### Image 
-
-Dans cet exemple, j'utilise une image générée aléatoirement via ce lien : https://avatar.iran.liara.run/public
-
-Cependant, vous faites comme bon vous semble (image sur Internet ou stockée sur disque)
-
-### Card
-
-L'effet que vous voyez sur la capture d'écran est le composant **Card**. 
-
-### Dégradé
-
-Pour le dégradé, au lieu d'utiliser une couleur unie, vous pouvez utiliser un BoxDecoration qui peut prendre le paramètre gradient
-
