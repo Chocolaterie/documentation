@@ -41,4 +41,18 @@ Dans un premier temps, vous pouvez simplement créer la page de connexion sans t
 - Uniquement un titre
 - Champ pour l'email et le mot de passe
 - Option pour se souvenir des informations
-- Bouton de connexion"=
+- Bouton de connexion
+
+## Validation de données
+
+Effectuer des contrôles de surface pour vérifier que l’identifiant est valide (grâce à
+**EmailValidator**)
+
+S’il y’a une erreur dans le couple email/mot de passe (condition bouchonnée), afficher
+un message d’erreur.
+
+On le remplacera un jour par l'appel d'une API
+
+## Routing
+
+Si le contrôle de surface passe, ouvrir la page qui contient les messages (la première page du TP)
