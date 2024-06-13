@@ -74,7 +74,7 @@ Si les informations sont correctes :
 
 ## Les commentaires/tweets
 
-Si vous êtes connecté, dans la page qu iaffiche les commentaires l'entrypoint est :
+Si vous êtes connecté, l'endpoint pour afficher les commentaires sur la page est :
 
 - GET: `http://127.0.01:3000/v2/comment/all`
 - Envoyer le token dans le header bearer token
