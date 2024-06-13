@@ -23,6 +23,12 @@ Exemple de résultat attendu :
 - Faites le mappage du JSON en objet Tweet manuellement.
 - Appelez l’API lors du clic sur un bouton « Rafraîchir » dans la page de tweet.
 - Une fois les données récupérées, n'oubliez pas d'utiliser setState pour mettre à jour la ListView (que vous aurez également créée).
+`
+## JSON Serializable
+
+Si vous utiliser la lib `json_serializable` n'oubliez pas qu'une fois votre modèle développé, il faut régénérer la classe qui contiendra les fonctions de mapping JSON à l'aide de : 
+
+`flutter pub run build_runner build
 
 
 ## Pour aller plus loin
