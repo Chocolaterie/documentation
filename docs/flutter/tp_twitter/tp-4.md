@@ -28,7 +28,7 @@ Exemple de résultat attendu :
 
 Si vous utiliser la lib `json_serializable` n'oubliez pas qu'une fois votre modèle développé, il faut régénérer la classe qui contiendra les fonctions de mapping JSON à l'aide de : 
 
-`flutter pub run build_runner build
+`flutter pub run build_runner build`
 
 
 ## Pour aller plus loin
