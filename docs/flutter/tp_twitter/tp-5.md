@@ -18,6 +18,13 @@ Par exemple, si j'accède à la page des tweets sans être connecté et que j'ap
 
 ![Screenshot](img/tp_api_node_01_01.png)
 
+## Lancer le Back-End Express
+
+Veuille récupérer le `tp_twitter_back_api`
+Dans le dossier en ligne de commande :
+- `npm install`  ou  `npm ci` (pour installer les dépendances, uniquement la première fois)
+- `node app.js` (pour lancer l'app)
+ 
 ## Postman
 
 Si vous voulez comprendre comment fonctionne une API qui vous est fournie, il convient de tester les points d'entrée sur Postman ou via Swagger s'il existe.
