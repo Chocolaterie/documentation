@@ -1,26 +1,75 @@
 ---
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # TP Twitter - Partie 05
 
-> **Durée Estimée : 30min-1h**
+> **Durée Estimée : 1h**
 
 ## Enoncé
 
-Ajoutez la localisation à l'application pour pouvoir avoir :
+Il convient d'avoir suivi la démo sur les APIs et l'exploitation de notre propre API Node.js avec des tokens pour le TP.
 
-- Le français
-- L'anglais
+Dorénavant, nous allons utiliser notre propre API backend en local pour récupérer les tweets et compléter les quatre écrans, y compris la page de connexion.
 
-Vous utiliserez la librairie localization (simplifie la tâche) : https://pub.dev/packages/localization
+Dans l'API backend fournie, la connexion génère un token JWT d'une durée d'une heure et les points d'entrée comme la récupération des tweets nécessiteront ce token, donc certaines routes seront protégées par authentification.
 
-## Bouton dans AppBar
+Par exemple, si j'accède à la page des tweets sans être connecté et que j'appelle le service :
 
-Vous devrez ajouter un bouton dans l'AppBar pour pouvoir afficher une boîte de dialogue qu ivous permeettra de choisir la langue
+![Screenshot](img/tp_api_node_01_01.png)
 
-![Screenshot](img/tp_05_01.png)
+## Postman
 
-La boîte de dialogue en question :
+Si vous voulez comprendre comment fonctionne une API qui vous est fournie, il convient de tester les points d'entrée sur Postman ou via Swagger s'il existe.
 
-![Screenshot](img/tp_05_02.png)
+Exemple de requête de connexion à l'API avec Postman :
+
+
+![Screenshot](img/tp_api_node_01_02.png)
+
+Exemple de requête de connexion à l'API avec Swagger :
+
+Connexion jwt avec swagger
+
+![Screenshot](img/tp_api_node_01_03.png)
+
+Appel d'une route
+
+![Screenshot](img/tp_api_node_01_04.png)
+
+## Login
+
+Les comptes mock :
+- isaac@gmail.com | 123456
+- denis@gmail.com | 123456
+- chocolatine@gmail.com | password
+
+Pour la connexion l'api:
+
+- POST: `http://127.0.01:3000/auth`
+- vous devez envoyer dans le request body :
+    - email
+    - password
+
+### Coupe email mot de passe incorrect
+
+Si les informations ne sont pas correctes
+
+![Screenshot](img/tp_api_node_login_01.png)
+
+### Connexion correcte
+
+
+Si les informations sont correctes :
+- Le token retourné par l'API devra être stocké dans Flutter par divers moyens (par exemple, dans un singleton, une variable statique ou un cache, à vous de choisir).
+- À chaque fois que vous allez appeler une API sécurisée, vous enverrez le token dans l'en-tête "Authorization" de la requête HTTP depuis Flutter, en utilisant le schéma Bearer Token.
+- Redirigez vers la page des commentaires/tweets
+
+## Les commentaires/tweets
+
+Si vous êtes connecté, dans la page qu iaffiche les commentaires l'entrypoint est :
+
+- GET: `http://127.0.01:3000/v2/comment/all`
+- Envoyer le token dans le header bearer token
+
+![Screenshot](img/tp_api_node_comments_02.png)
