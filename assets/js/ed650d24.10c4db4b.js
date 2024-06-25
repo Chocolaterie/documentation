@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkschool_learn=self.webpackChunkschool_learn||[]).push([[2848],{1376:o=>{o.exports=JSON.parse('{"tags":[{"label":"facebook","permalink":"/documentation/blog/tags/facebook","count":1},{"label":"hello","permalink":"/documentation/blog/tags/hello","count":1},{"label":"docusaurus","permalink":"/documentation/blog/tags/docusaurus","count":1}]}')}}]);
