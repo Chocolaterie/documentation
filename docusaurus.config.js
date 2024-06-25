@@ -47,7 +47,7 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/scss/main.scss'),
         },
       }),
     ],
@@ -94,6 +94,8 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+    plugins: ['docusaurus-plugin-sass'],
 };
 
 export default config;

@@ -1,49 +1,56 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+import styles from './styles.module.scss';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    col_string: 'col col--4',
+    url: '/docs/category/tp-1',
+    title: 'NodeJS',
+    img_path: '/img/nodejs_feature.png',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Contient des TP NodeJS/Express uniquement cotés Back-End
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    col_string: 'col col--4',
+    url: '/docs/category/tp-twitter',
+    title: 'Flutter',
+    img_path: '/img/flutter_feature.png',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Contient des TP Flutters, spécifiquement accès sur une page de connexion avec JWT et appel web service  pour alimenter des ListView
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ col_string, url, title, img_path, description }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={col_string}>
+      <div className="ss-card ss-card-2 ">
+        <Link
+          className={"ss-post-link"}
+          to={url}>
+
+          <div className="ss-img">
+            <p><img className="lazyloaded" src={useBaseUrl(img_path)} /></p>
+          </div>
+          <div className="ss-subject">
+            <div className="ss-text">{title}</div>
+          </div>
+          <div className="ss-info">
+            <div className="content">
+              <div className="ss-description">
+                {description}
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
