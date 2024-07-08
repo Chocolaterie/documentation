@@ -27,6 +27,10 @@ Les champs :
 - Mot de passe
 - Bouton : Connexion
 
+## Résultat attendu (Simple ou Designé)
+
+![Screenshot](img/tp_1_01.png)
+
 # Ecran d'inscription
 
 Le titre de la page : Inscription
@@ -41,6 +45,10 @@ Les champs :
 - N° Telephone
 - Bouton : S'inscrire
 
+## Résultat attendu (Simple ou Designé)
+
+![Screenshot](img/tp_1_02.png)
+
 # Ecran mot de passe oublié
 
 Le titre de la page : Récuperation de mot de passe
@@ -48,3 +56,7 @@ Le titre de la page : Récuperation de mot de passe
 Les champs :
 - Email
 - Bouton : Envoyer le lien de récupération
+
+## Résultat attendu (Simple ou Designé)
+
+![Screenshot](img/tp_1_03.png)
