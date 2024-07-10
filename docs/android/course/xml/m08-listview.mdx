@@ -1,0 +1,129 @@
+---
+sidebar_position: 8
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# ListView et RecyclerView
+
+Bien qu'il existe beaucoup de composants graphique interessant sur Android, nous allons néanmoins illustré les ListView et RecyclerView car ce sont ceux les plus utiliser dans une application professionnelle.
+
+Ces deux composants servent a afficher des liste d'element.
+
+La ListView est plus simple d'utilisation q'un RecyclerView mais moins performant.
+
+## ListView
+
+Pour commencer, un exemple d'utilisation avec une liste de chaînes de caractères est le plus simple.
+
+Une liste comporte ces étapes :
+
+- Ajouter un composant `<ListView>` avec un identifiant dans le fichier XML
+- Récupérer ce composant dans le fichier Kotlin en utilisant son identifiant
+- Définir un `ArrayAdapter`, qui permet de déterminer comment afficher chaque élément de la liste
+- Alimenter cette liste à l'aide de l'`ArrayAdapter`
+
+<Tabs
+  defaultValue="xml"
+  values={[
+    {label: 'XML', value: 'xml'},
+    {label: 'Kotlin', value: 'kotlin'}
+  ]}>
+<TabItem value="xml">
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- ListView pour afficher la liste de strings -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+```
+</TabItem>
+
+<TabItem value="kotlin">
+```kotlin
+// Liste fictive
+val stringList = listOf(
+    "Film 1",
+    "Film 2",
+    "Film 3"
+)
+
+// Adapter pour la ListView
+// Adapater déja développé sur Android pour afficher une cellule avec un String
+val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, stringList)
+
+// ListView dans le layout
+val listView = findViewById<ListView>(R.id.listView)
+listView.adapter = adapter
+```
+</TabItem>
+</Tabs>
+
+### Customiser la ligne
+
+Pour personnaliser l'affichage de chaque ligne, il faut créer son propre `ArrayAdapter` personnalisé qui va permettre de surcharger :
+
+<Tabs
+  defaultValue="xml"
+  values={[
+    {label: 'XML', value: 'xml'},
+    {label: 'Kotlin', value: 'kotlin'}
+  ]}>
+<TabItem value="xml">
+```xml
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientatiin="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+  <!-- Un textview dans la cellule -->
+  <TextView
+      android:id="@+id/movie_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textSize="18sp"
+      android:textStyle="bold"
+      android:padding="10dp"/>
+
+<LinearLayout>
+```
+</TabItem>
+
+<TabItem value="kotlin">
+```kotlin
+class MovieAdapter(context: Context, movies: List<Movie>) :
+    ArrayAdapter<Movie>(context, 0, movies) {
+
+    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        var itemView = convertView
+        if (itemView == null) {
+            itemView = LayoutInflater.from(context).inflate(R.layout.list_item_movie, parent, false)
+        }
+
+        val movie = getItem(position)
+        val titleTextView = itemView!!.findViewById<TextView>(R.id.movie_title)
+        titleTextView.text = movie?.title
+
+        return itemView
+    }
+}
+```
+</TabItem>
+</Tabs>
+
+Dans l'Activity l'adapter deviens ceci :
+
+```kotlin
+// Adapter personnalisé
+val adapter = MovieAdapter(this, movies)
+```

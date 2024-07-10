@@ -1,0 +1,134 @@
+---
+sidebar_position: 2
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Kotlin
+
+Kotlin est un langage de programmation moderne qui se distingue de Java par plusieurs caractéristiques clés :
+
+## Variables
+
+En Kotlin, vous déclarez une variable avec `val` pour une valeur immuable (constante) ou `var` pour une variable mutable :
+```kotlin
+val pi = 3.14  // Constante (ne peut pas être modifiée)
+var count = 0  // Variable mutable (peut être modifiée)
+```
+
+## Types de données
+
+Kotlin infère souvent le type de données :
+
+```kotlin
+val name = "Chocolatine"
+var prix = 940
+```
+
+Mais vous pouvez le spécifier explicitement :
+
+```kotlin
+val name: String = "Chocolatine"
+var prix: Int = 940
+```
+
+## Fonctions
+
+Les fonctions sont définies avec **fun** :
+
+```kotlin
+fun appelPrenom(name: String) {
+  println("Hello, $name!")
+}
+
+appelPrenom("Alice")  // Appel de fonction
+```
+
+Avec un retour :
+
+```kotlin
+fun getChocolatinePrice() : Int {
+  return 980;
+}
+
+val price = getChocolatinePrice()  // Appel de fonction
+```
+
+## Nullabilité
+
+Kotlin encourage la sécurité contre les nulls avec des types non-nullable (String) et nullable (String?) :
+
+```kotlin
+val name: String? = null
+```
+
+Utilisation de ? et ! pour la nullabilité :
+
+- ? permet de déclarer un type comme nullable, ce qui signifie qu'il peut contenir une valeur null.
+
+- ! est utilisé pour indiquer qu'une valeur est non-null pour forcer un accès potentiellement dangereux à une valeur nullable 
+
+```kotlin
+// Utilisation sécurisée de l'opérateur ?. pour accéder à la longueur seulement si nullableValue n'est pas null
+val name: String? = null
+val length = nullableValue?.length 
+
+// Utilisation de !! pour forcer l'accès à la propriété length de productName, même si productName peut être null (attention : peut provoquer une exception NullPointerException)
+val productName: String? = "Beurre Doux"
+val length = productName!!.length 
+
+// Cas ou ça CRASH :
+val productName: String? = null // <- il est null donc !! fait crash
+val length = productName!!.length 
+
+```
+
+## Classes et Objets
+
+Les classes sont déclarées avec class et le constructeur peut implicitement déclarer et initialiser les membres de la classe en même temps :
+
+```kotlin
+class Person(val email: String, var age: Int) {
+}
+
+val person = Person("chocoblast@gmail.com", 987)
+
+```
+
+### Heritage
+
+- La classe qui va être héritée doit avoir le mot-clé `open`.
+- Lorsqu'une classe hérite, elle doit appeler le constructeur de son héritage.
+
+```kotlin
+open class Person(val email: String, var age: Int) {
+}
+
+class Employee(val email: String, var age: Int, var salary: Int) : Person(email, age) {
+}
+```
+
+## Interface
+
+```kotlin
+
+interface IDAOPerson {
+
+   fun selectAll() : List<Person>
+}
+
+class DAOPersonImpl : IDAOPerson {
+  override fun selectAll() : List<Person> {
+    ...
+  }
+}
+
+```
+
+
+:::info Extra
+
+Sur **Kotlin** il est possible d'écrire du code par défaut dans les **fonctions** des **interfaces**. Cela permet de fournir une implémentation par défaut pour une méthode dans une interface, ce qui simplifie l'implémentation dans les classes qui en héritent, mais qui n'ont pas besoin de redéfinir la méthode.
+
+:::
