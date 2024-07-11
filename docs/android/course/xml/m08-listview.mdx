@@ -82,13 +82,13 @@ Pour personnaliser l'affichage de chaque ligne, il faut créer son propre `Array
 ```xml
 <LinearLayout
   xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientatiin="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     >
   <!-- Un textview dans la cellule -->
   <TextView
-      android:id="@+id/movie_title"
+      android:id="@+id/tvMovieTitle"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:textSize="18sp"
@@ -111,7 +111,7 @@ class MovieAdapter(context: Context, movies: List<Movie>) :
         }
 
         val movie = getItem(position)
-        val titleTextView = itemView!!.findViewById<TextView>(R.id.movie_title)
+        val titleTextView = itemView!!.findViewById<TextView>(R.id.tvMovieTitle)
         titleTextView.text = movie?.title
 
         return itemView
