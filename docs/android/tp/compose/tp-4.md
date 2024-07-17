@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# TP Android - Partie 04 (Version Compose)
+# TP Android - Partie 04
 
 > **Durée Estimée : 1h-2h**
 
