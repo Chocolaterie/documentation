@@ -23,9 +23,7 @@ Nous remarquons bien que c'est très vaste !
 
 Lorsqu'on développe une application et que nous devons faire vite dans le cadre d'un TP ou POC (Proof of Concept), on peut choisir, par exemple, la solution de stocker le String dans une classe statique et, au pire, changer de méthode plus tard.
 
-
 ## Exemple stocker dans un classe statique
-
 
 ```kotlin
 class MonCacheMemoire {
