@@ -58,3 +58,9 @@ et un bloc comprenant le nom de l’auteur, son identifiant et la date
 du post. En dessous de ce dernier bloc figure le texte.
 
 ![Screenshot](img/tp_01_04.png)
+
+## Image 
+
+Dans cet exemple, j'utilise une image générée aléatoirement via ce lien : https://avatar.iran.liara.run/public
+
+Cependant, vous faites comme bon vous semble (image sur Internet ou stockée sur disque)

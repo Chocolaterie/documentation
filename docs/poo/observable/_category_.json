@@ -1,0 +1,8 @@
+{
+  "label": "Observable",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Essayer de comprendre le pattern Observable"
+  }
+}

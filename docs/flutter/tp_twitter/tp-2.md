@@ -27,11 +27,6 @@ et **Favoris** par des **IconButton**
 
 ![Screenshot](img/tp_02_03.png)
 
-## Image 
-
-Dans cet exemple, j'utilise une image générée aléatoirement via ce lien : https://avatar.iran.liara.run/public
-
-Cependant, vous faites comme bon vous semble (image sur Internet ou stockée sur disque)
 
 ## Card
 
