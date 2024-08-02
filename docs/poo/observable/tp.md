@@ -81,3 +81,43 @@ maFonction();
 On pourrait aller plus loin et ajouter des paramètres génériques. Bref, la POO est vaste et permet de faire beaucoup de choses. 
 
 Il faut surtout comprendre que la majorité des éléments sont des classes, de l'héritage, du typage, des signatures, etc. Une fois que l'on connaît ces concepts, peu importe les types ou signatures, même farfelus, il suffit de les appliquer comme tout autre type ou signature.
+
+
+### Main
+
+Voici le main déjà développé, débrouillez-vous pour qu'il fonctionne et que les prints s'affichent bien dans la console
+
+:::warning Attention 
+
+VOUS NE DEVEZ PAS TOUCHER AU CONTENU DU CODE DANS LE MAIN
+
+:::
+
+
+```dart
+void main() {
+  // Créer un observable avec une valeur initiale
+  var observable = Observable<int>(0);
+
+  // Ajouter un observateur
+  observable.addObserver((value) {
+    print('Observateur 1: La valeur a changé: $value');
+  });
+
+  // Ajouter un autre observateur
+  void Function(int value) observer2 = (value) {
+    print('Observateur 2: La valeur a changé: $value');
+  };
+  observable.addObserver(observer2);
+
+  // Changer la valeur pour voir les observateurs en action
+  observable.setValue(1);
+  observable.setValue(2);
+
+  // Retirer un observateur
+  observable.removeObserver(observer2);
+
+  // Changer la valeur pour voir l'effet après avoir retiré un observateur
+  observable.setValue(3);
+}
+```

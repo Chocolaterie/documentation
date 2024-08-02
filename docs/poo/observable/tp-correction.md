@@ -35,35 +35,3 @@ class Observable<T> {
   }
 }
 ```
-
-### Main
-
-```dart
-void main() {
-  // Créer un observable avec une valeur initiale
-  var observable = Observable<int>(0);
-
-  // Ajouter un observateur
-  observable.addObserver((value) {
-    print('Observateur 1: La valeur a changé: $value');
-  });
-
-  // Ajouter un autre observateur
-  observable.addObserver((value) {
-    print('Observateur 2: La valeur a changé: $value');
-  });
-
-  // Changer la valeur pour voir les observateurs en action
-  observable.setValue(1);
-  observable.setValue(2);
-
-  // Retirer un observateur
-  observable.removeObserver((value) {
-    print('Observateur 2: La valeur a changé: $value');
-  });
-
-  // Changer la valeur pour voir l'effet après avoir retiré un observateur
-  observable.setValue(3);
-}
-
-```
