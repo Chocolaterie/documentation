@@ -4,22 +4,23 @@ sidebar_position: 6
 
 # TP Spring DAO JDBC
 
-## Etape 1
+## Étape 1
 
-- Installeer Spring Data JDBC et le connecteur MySQL dans Gradle.
-- Crée la base de données "movie" dans Workbench.
-- Configurer les paramètres de connexion dans application.properties.
+- Installez **Spring Data JDBC** et le connecteur **MySQL** dans Gradle.
+- Créez la base de données `movie` dans **Workbench**.
+- Configurez les paramètres de connexion dans `application.properties`.
 
-Objectif : S'assurer que le serveur démarre sans erreur.
+**Objectif :** S'assurer que le serveur démarre sans erreur.
 
-## Etape 2
+## Étape 2
 
-Insérer des fausses données en bases :
-- Utilise les fichiers SQL fournis comme point de départ, en les adaptant si nécessaire.
-- Prends le temps de générer toi-même les données en utilisant des outils comme https://www.mockaroo.com.
+### Insérer des fausses données en base
 
-Ensuite :
+- Utilisez les fichiers SQL fournis comme point de départ, en les adaptant si nécessaire.
+- Prenez le temps de générer vos propres données en utilisant des outils comme [Mockaroo](https://www.mockaroo.com).
 
-- Créer la classe **DAOMovieMySQL** qui implemente votre interface DAO.
-- Déclarer et utiliser les profiles pour faire fonctionner l'injection (car on veut injecter que `DAOMovieMySQL` et **pas** `DAOMovieMock`)
-- Faire les requêtes et le **RowMapper** dans l'implementation **DAOMovieMySQL**
+### Développement
+
+- Créez la classe `DAOMovieMySQL` qui implémente votre interface DAO.
+- Déclarez et utilisez les **profils Spring** pour gérer l'injection de dépendances (nous voulons injecter uniquement `DAOMovieMySQL` et **pas** `DAOMovieMock`).
+- Implémentez les requêtes SQL et le `RowMapper` dans l'implémentation `DAOMovieMySQL`.
