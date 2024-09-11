@@ -8,6 +8,21 @@ sidebar_position: 5
 
 ## Enoncé
 
+:::warning Localhost du serveur
+
+L'api sera appelé sur le **localhost**
+
+Dans tout les cas port **3000**
+
+Les ip possibles selon votre cas :
+
+- 127.0.0.1 : Localhost du pc en port fowarding
+- 10.0.2.2 : Sur emulateur avec le security-config 
+- 10.0.0.2 : Sur un autre emulateur sans security-config
+- etc..
+
+:::
+
 ### Objectif
 
 Adapter le TP actuel pour qu'il fonctionne avec un **web service** (API).

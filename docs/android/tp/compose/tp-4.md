@@ -9,8 +9,8 @@ sidebar_position: 4
 ## Enoncé
 
 À présent, vous allez créer :
-- Un  **ViewModel** pour gérér les articles, mais avec **MutableStateFlow**.
-- La liste des articles dans la vue **Compose** devra se recharger automatiquement en écoutant les changements des films dans le **ViewModel**.
+- Un **ViewModel** pour gérér les articles avec **MutableStateFlow**.
+- La liste des articles dans la vue **Compose** devra se recharger automatiquement en écoutant les changements des articles dans le **ViewModel**.
 
 ## Pour tester
 
