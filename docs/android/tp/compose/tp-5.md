@@ -29,7 +29,9 @@ Adapter le TP actuel pour qu'il fonctionne avec un **web service** (API).
 
 ### Back-End (API)
 
-Vous devez créer une **application web API** en **Node.js** avec **Express** (comme montré dans la démo).
+L'API Local est située ici : https://github.com/Chocolaterie/ApiArticle
+
+Il y'a des instructions dans le Readme pour pouvoir l'utiliser (il faut installer Node JS dans un premier temps) 
 
 #### Modèle
 
@@ -39,18 +41,23 @@ Le modèle à utiliser sera **Article**.
 
 Vous devez implémenter les routes suivantes, classées par ordre de difficulté/priorité :
 
-1. **getAll** : Récupérer la liste des articles.
-2. **getById** : Récupérer un article par son ID.
-3. **saveArticle** : Gérer la création et la mise à jour des articles.
-4. **deleteArticle** : Supprimer un article par son ID.
+1. GET: **articles** : Récupérer la liste des articles.
+2. GET: **article/:id** : Récupérer un article par son ID.
+3. POST: **save-article** : Gérer la création et la mise à jour des articles.
+4. DELETE: **article/:id** : Supprimer un article par son ID.
 
-#### Test
 
-:::warning **Attention !!!** 
-Testez toutes les routes de votre web service via **Swagger** avant de passer à la partie front-end.
+:::info **A LIRE**
+
+L'ID est un String
+
 :::
 
 ### Front-End
+
+## Ressources
+
+Pour la doc retrofit vous pouvez consulter : https://square.github.io/retrofit/
 
 #### Liste des articles
 
@@ -60,15 +67,23 @@ Testez toutes les routes de votre web service via **Swagger** avant de passer à
 
 Pour chaque article, il doit y avoir trois boutons permettant d'effectuer les actions suivantes :
 
-1. **Voir** : Afficher une page avec le détail de l'article.
-2. **Editer** : Ouvrir le formulaire de l'article en mode édition.
-3. **Supprimer** : Appeler l'API pour supprimer l'article, puis rafraîchir la liste des articles.
+- **Voir** : Afficher une page avec le détail de l'article.
+
+#### BONUS (Pour allez plus loin)
+
+- **Éditer** : Ouvrir le formulaire de l'article en mode édition.
+- **Supprimer** : Appeler l'API pour supprimer l'article, puis rafraîchir la liste des articles.
 
 #### Détail de la suppression
 
 Dans l'exemple ci-dessus, l'appel à l'API pour supprimer un article pourrait ressembler à cela :
 
 ```kotlin
-fun deleteArticle(movieId: String) {
+fun deleteArticle(articleId: String) {
     // Logique pour appeler l'API de suppression
+    // Exemple :
+    val response = apiService.deleteArticle(articleId)
+    if (response.isSuccessful) {
+        // Rafraîchir la liste des articles
+    }
 }
