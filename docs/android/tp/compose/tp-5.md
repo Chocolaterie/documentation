@@ -4,7 +4,7 @@ sidebar_position: 5
 
 # TP Android - Partie 05
 
-> **Durée Estimée : Indeterminée (4h) **
+> **Durée Estimée : Indeterminée (4h)**
 
 ## Enoncé
 
