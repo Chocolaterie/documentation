@@ -74,7 +74,7 @@ MyTheme {
                 MaVueOne()
             }
             composable("secondPage") {
-                  MaVueTwo()
+                MaVueTwo()
             }
         }
     }
