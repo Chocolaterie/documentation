@@ -12,7 +12,7 @@ sidebar_position: 6
 
 Mettre en place une authentification JWT (avec couple email/password) et sécuriser l'accès aux routes suivantes avec un middleware JWT :
 
-- POST : save-article
+- POST : /save-article
 - DELETE : /article/:id
 
 ### Authentification
