@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# TP Eni Store API (Partie 2)
+# TP Eni Store API (Partie 2 - Before)
 
 > **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les modules 1 à 2 et d’avoir réalisé les TP proposés.
 
