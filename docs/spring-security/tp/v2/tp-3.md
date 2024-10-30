@@ -14,12 +14,6 @@ Dans ce TP, nous allons mettre en place des réponses métier plutôt que de sim
 
 Ajouter le **ServiceResponse** générique
 
-## Quelques pistes 
-
-
-### Dans le Metier
-Étant donné qu'il est nécessaire de maintenir le fonctionnement des anciennes routes, vous devrez probablement dupliquer des fonctions dans la couche métier/service. 
-
 ## Règle de gestion
 
 ### RG-001 : Récupérer les articles
