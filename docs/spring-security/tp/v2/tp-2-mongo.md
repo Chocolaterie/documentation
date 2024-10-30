@@ -37,7 +37,7 @@ Un article contient au moins:
 
 Attention pour le moment vous remplacez **ArticleDAOSQL** par **ArticleDAOMongo**, pareil pour **ArticleSQLRepository**, c'est juste un schéma d'architecture (utilisé plus tard)
 
-![Diagram](img/tp_2_archi_sql.png)
+![Diagram](../img/tp_2_archi_sql.png)
 
 ## Tester
 
