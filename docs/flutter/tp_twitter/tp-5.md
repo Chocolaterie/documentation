@@ -47,13 +47,13 @@ Appel d'une route
 ## Login
 
 Les comptes mock :
-- isaac@gmail.com | 123456
-- denis@gmail.com | 123456
-- chocolatine@gmail.com | password
+- isaac@gmail.com | password 
+- tata@gmail.com | 123456
+- toto@gmail.com | 12345
 
 Pour la connexion l'api:
 
-- POST: `http://127.0.01:3000/auth`
+- POST: `http://127.0.01:3000/login`
 - vous devez envoyer dans le request body :
     - email
     - password
@@ -76,7 +76,7 @@ Si les informations sont correctes :
 
 Si vous êtes connecté, l'endpoint pour afficher les commentaires sur la page est :
 
-- GET: `http://127.0.01:3000/v2/comment/all`
+- GET: `http://127.0.01:3000/messages`
 - Envoyer le token dans le header bearer token
 
 ![Screenshot](img/tp_api_node_comments_02.png)
