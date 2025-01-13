@@ -31,3 +31,55 @@
 - **EmailObserver** : L'email se met à jour si c'est la clé `email` avec une donnée générique **String** qui est appelée
 
 - **AccountObserver** : Le montant se met à jour si c'est la clé `amount` avec une donnée générique **Long** qui est appelée
+
+
+### Main
+
+Voici le main déjà développé, débrouillez-vous pour qu'il fonctionne et que les prints s'affichent bien dans la console.
+
+:::warning Attention 
+
+VOUS NE DEVEZ PAS TOUCHER AU CONTENU DU CODE DANS LE MAIN
+
+:::
+
+Le package sera nommé : `fr.eni.tp`
+
+```java
+public class App {
+
+	public static void main(String[] args) {
+		 // Création de l'observable
+        Observable observable = new Observable();
+
+        // Création des observateurs
+        Observer observer1 = new EmailObserver();
+        Observer observer2 = new ContratObserver("148451841517");
+        Observer observer3 = new AccountObserver();
+
+        // Ajout des observateurs
+        observable.addObserver(observer1);
+        observable.addObserver(observer2);
+        observable.addObserver(observer3);
+
+        // Notifier un mail
+        System.out.println("Appel avec un email envoyé");
+        observable.notifyObservers("email", "titi@gmail.com");
+        
+        // Notifier un montant
+        System.out.println("Appel avec un montant envoyé");
+        observable.notifyObservers("amount", 256L);
+    }
+}
+```
+
+### Exemple de Résultat Attendu
+
+Voici ce qui doit être affiché dans la console:
+
+```
+Appel avec un email envoyé
+L'email change  : titi@gmail.com
+Appel avec un montant envoyé
+L'état du compte a changé : 256
+```
