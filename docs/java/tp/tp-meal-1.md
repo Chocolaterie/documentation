@@ -1,8 +1,8 @@
 ---
 sidebar_position: 10
 ---
-
-# TP : Gestion des Recettes avec Ingrédients
+ 
+# TP - Meal (Partie 1)
 
 ## Objectifs du TP
 
