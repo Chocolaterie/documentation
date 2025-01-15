@@ -69,8 +69,67 @@ Dans un premier temps, commencez par implémenter les deux fonctionnalités prin
 2. Continuez avec la couche **Service**.
 3. Terminez par l'implémentation de l'IHM, que ce soit en console ou avec une interface graphique.
 
+:::info **A LIRE**
+
+Pour l'instant, la gestion des ingrédients n'est pas encore prise en charge.
+
+:::
+
 ### Schema UML (version 1)
 
 ![Screenshot](img/tp_meal_01_01.png)
 
 ---
+
+### Main
+
+Voici le main déjà développé, débrouillez-vous pour qu'il fonctionne et que les prints s'affichent bien dans la console.
+
+:::warning Attention 
+
+VOUS NE DEVEZ PAS TOUCHER AU CONTENU DU CODE DANS LE MAIN
+
+:::
+
+Le package sera nommé : `fr.eni.tp`
+
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        // Initialisation de la couche DAO et Service
+        MealDAO mealDAO = new MealDAO();
+        MealService mealService = new MealService(mealDAO);
+
+        // Ajout de quelques repas via le service
+        mealService.addMeal(new Meal(1, "Pizza"));
+        mealService.addMeal(new Meal(2, "Salade"));
+        mealService.addMeal(new Meal(3, "Pâtes"));
+
+        // Tester la fonctionnalité getAll
+        System.out.println("=== Liste de tous les repas ===");
+        for (Meal meal : mealService.getAll()) {
+            System.out.println(meal);
+        }
+
+        // Tester la fonctionnalité getById
+        System.out.println("\n=== Recherche d'un repas par ID ===");
+        int testId = 2;
+        Meal foundMeal = mealService.getById(testId);
+        if (foundMeal != null) {
+            System.out.println("Repas trouvé pour l'ID " + testId + " : " + foundMeal);
+        } else {
+            System.out.println("Aucun repas trouvé pour l'ID " + testId);
+        }
+
+        // Tester un ID qui n'existe pas
+        int invalidId = 5;
+        Meal notFoundMeal = mealService.getById(invalidId);
+        if (notFoundMeal != null) {
+            System.out.println("Repas trouvé pour l'ID " + invalidId + " : " + notFoundMeal);
+        } else {
+            System.out.println("Aucun repas trouvé pour l'ID " + invalidId);
+        }
+    }
+}
+```
