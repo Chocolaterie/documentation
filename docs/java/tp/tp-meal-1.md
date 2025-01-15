@@ -97,9 +97,9 @@ Dans la DAO les données initialisées:
 ```java
 
 private List<Meal> meals = Arrays.asList(
-    new Meal(1, "Pizza"), 
-    new Meal(2, "Salade"),
-    new Meal(3, "Pâtes"));
+    new Meal(1L, "Pizza"), 
+    new Meal(2L, "Salade"),
+    new Meal(3L, "Pâtes"));
 ```
 
 Le Main:
