@@ -3,7 +3,7 @@ sidebar_position: 6
 ---
 
 
-# TP - Meal (Partie 1)
+# TP - Pattern Observable (Niveau 2)
 
 ## Objectif
 
