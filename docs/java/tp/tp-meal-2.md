@@ -4,6 +4,20 @@ sidebar_position: 11
  
 # TP - Meal (Partie 2)
 
+
+## Objectifs du TP
+
+Dans ce TP, vous allez devoir:
+
+- Intégrer le pattern Singleton
+- Intégrer les ingrédients
+
+### Schema UML (version 2)
+
+![Screenshot](img/tp_meal_02_01.png)
+
+---
+
 ### Main
 
 Voici le main déjà développé, débrouillez-vous pour qu'il fonctionne et que les prints s'affichent bien dans la console.
@@ -18,12 +32,14 @@ Le package sera nommé : `fr.eni.tp`
 
 Dans la DAO les données initialisées:
 ```java
-List<Movie> meals = Arrays.asList(
-    new Meal(1, "Pizza", Arrays.asList(new Ingredient(1, "Cheese", "200g"),new Ingredient(2, "Tomato", "3 pcs"))), 
-    new Meal(2, "Salade", Arrays.asList(new Ingredient(1, "Lettuce", "1 bunch"),new Ingredient(2, "Tomato", "3 pcs"),new Ingredient(5, "Olive Oil", "50ml"))), 
-    new Meal(3, "Pâtes", Arrays.asList(new Ingredient(4, "Pasta", "250g")),new Ingredient(5, "Olive Oil", "50ml"))));
+	List<Meal> meals = Arrays.asList(
+			new Meal(1, "Pizza", Arrays.asList(new Ingredient(1, "Cheese", "200g"), new Ingredient(2, "Tomato", "3 pcs"))),
+			new Meal(2, "Salade", Arrays.asList(new Ingredient(1, "Lettuce", "1 bunch"), new Ingredient(2, "Tomato", "3 pcs"), new Ingredient(5, "Olive Oil", "50ml"))),
+			new Meal(3, "Pâtes", Arrays.asList(new Ingredient(4, "Pasta", "250g"), new Ingredient(5, "Olive Oil", "50ml")))
+			);
 ```
 
+Le Main:
 ```java
 public class Main {
 
