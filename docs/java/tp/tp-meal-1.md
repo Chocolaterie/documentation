@@ -93,17 +93,22 @@ VOUS NE DEVEZ PAS TOUCHER AU CONTENU DU CODE DANS LE MAIN
 
 Le package sera nommé : `fr.eni.tp`
 
+Dans la DAO les données initialisées:
+```java
+
+private List<Movie> meals = Arrays.asList(
+    new Meal(1, "Pizza"), 
+    new Meal(2, "Salade"),
+    new Meal(3, "Pâtes"));
+```
+
+Le Main:
 ```java
 public class Main {
 
     public static void main(String[] args) {
-        // Initialisation de la couche DAO et Service
+        // Initialisation du Service
         MealService mealService = new MealService();
-
-        // Ajout de quelques repas via le service
-        mealService.addMeal(new Meal(1, "Pizza"));
-        mealService.addMeal(new Meal(2, "Salade"));
-        mealService.addMeal(new Meal(3, "Pâtes"));
 
         // Tester la fonctionnalité getAll
         System.out.println("=== Liste de tous les repas ===");
