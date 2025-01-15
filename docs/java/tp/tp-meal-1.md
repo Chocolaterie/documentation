@@ -96,7 +96,7 @@ Le package sera nommé : `fr.eni.tp`
 Dans la DAO les données initialisées:
 ```java
 
-private List<Movie> meals = Arrays.asList(
+private List<Meal> meals = Arrays.asList(
     new Meal(1, "Pizza"), 
     new Meal(2, "Salade"),
     new Meal(3, "Pâtes"));
