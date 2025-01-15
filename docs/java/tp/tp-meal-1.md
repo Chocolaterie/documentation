@@ -98,8 +98,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Initialisation de la couche DAO et Service
-        MealDAO mealDAO = new MealDAO();
-        MealService mealService = new MealService(mealDAO);
+        MealService mealService = new MealService();
 
         // Ajout de quelques repas via le service
         mealService.addMeal(new Meal(1, "Pizza"));
