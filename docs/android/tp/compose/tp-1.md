@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Développer les 3 fichiers Activity réprésentant les 3 écrans qui vont suivre.
 
-Donc on reste sur le MainActivity pour l'instant, vous changerez le `setContentView` à votre guise pour tester les écrans.
+Donc on reste sur le MainActivity pour l'instant, vous changerez le `setContent` à votre guise pour tester les écrans.
 
 Fonctionnalités :
 
