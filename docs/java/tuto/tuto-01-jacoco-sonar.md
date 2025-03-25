@@ -47,6 +47,27 @@ sonar {
 }
 ```
 
+
+## Ajouter test jacoco dans test gradle
+
+Dans tasks.named('test'):
+
+```
+finalizedBy jacocoTestReport
+```
+
+Donc ça ressemble à :
+
+```
+tasks.named('test') {
+	useJUnitPlatform()
+	finalizedBy jacocoTestReport
+}
+```
+
+Cela permet de dire à `gradle test` d'effectuer les tests suivants :
+- Tests unitaires JUnit
+- Tests jacoco (code coverage)
 ## sonar-project.properties
 
 - On dit à Sonar que le code coverage est fait par jacoco
@@ -60,6 +81,14 @@ sonar.inclusions=**/*Service.java
 
 ## Exécuter le code coverage Jacoco en CMD nativement
 
+A exécuter à la racine du projet projet en CMD 
+
 ```
 gradlew.bat build jacocoTestReport sonar
 ```
+
+:::info Note
+
+Je conseil d'utiliser la ligne de commande native
+
+:::
