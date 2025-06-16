@@ -77,7 +77,28 @@ model.predict(X_test)          # Prédire
 model.score(X_test, y_test)    # Score global
 ```
 
-## Évaluation des modèles
+## Évaluation des modèles (exemples)
+
+### Accurancy
+
+```python
+from sklearn.metrics import accuracy_score
+
+accuracy = accuracy_score(y_test, y_pred)
+
+print(f"Accuracy : {accuracy}")
+```
+
+### MSE
+
+```python
+from sklearn.metrics import mean_squared_error
+
+mse = mean_squared_error(y_test, y_pred)
+print(f'MSE du model de prédiction : {mse}')
+```
+
+### Autres
 
 ```python
 from sklearn.metrics import classification_report, confusion_matrix
@@ -111,6 +132,47 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 ```
 
+## Exporter un modèle entraîné
+
+On peut exporter un modèle de plusieurs manières.  
+La méthode la plus simple est `pickle`, mais elle est **moins performante** (surtout pour les gros objets ou les modèles avec beaucoup de données numériques).
+
+> Pour de meilleurs temps de lecture/écriture, on utilise souvent `joblib`, optimisé pour les objets numpy/scikit-learn.
+
+Exemple avec `pickle` :
+
+```py
+import pickle
+
+# Exporter le modèle avec pickle
+with open('../model/model_predic_bac.pkl', 'wb') as file:
+    pickle.dump(model, file)
+```
+
+## Importer un modèle entraîné
+
+Pour réutiliser le modèle plus tard, on peut le recharger avec `pickle` (même remarque : simple, mais pas optimal en perf).
+
+```py
+import pickle
+
+# Importer le modèle depuis le fichier pkl
+with open('../model/model_predic_bac.pkl', 'rb') as file:
+    model_note_bac = pickle.load(file)
+
+# Refaire une prédiction à partir du modèle chargé
+predict_data_test = ...
+prediction_test = model_note_bac.predict(predict_data_test)
+```
+
+:::info Alternative recommandée pour de meilleures performances
+
+> Utiliser `joblib`  
+> Elle est souvent utilisée pour les modèles scikit-learn :  
+> `from joblib import dump, load`
+
+:::
+
 ## À retenir
 
 | Étape | Outils |
@@ -119,9 +181,3 @@ y_pred = model.predict(X_test)
 | Séparation | `train_test_split()` |
 | Modélisation | `fit()`, `predict()` |
 | Évaluation | `accuracy_score()`, `confusion_matrix()` |
-
-## Prochaines étapes
-
-- Tester plusieurs modèles avec les **mêmes données**
-- Explorer les **paramètres des modèles** (`max_depth`, `n_neighbors`, etc.)
-- Apprendre la **validation croisée** et le **tuning automatique (GridSearchCV)**

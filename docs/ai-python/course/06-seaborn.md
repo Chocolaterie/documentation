@@ -40,7 +40,16 @@ df = sns.load_dataset("penguins")
 print(df.head())
 ```
 
-## Graphique en nuage de points (scatterplot)
+## Quelques graphs d'exemples
+
+:::warning Attention
+
+Attention, **plt.show()** n'est pas toujours obligatoire avec Seaborn.
+On l’utilise généralement lorsqu’on combine ou surcharge des graphiques Seaborn avec des éléments de Matplotlib.
+
+:::
+
+### Graphique en nuage de points (scatterplot)
 
 ```python
 sns.scatterplot(data=df, x="flipper_length_mm", y="body_mass_g")
@@ -48,7 +57,7 @@ plt.title("Longueur des nageoires vs Masse corporelle")
 plt.show()
 ```
 
-## Coloration par catégorie
+### Coloration par catégorie
 
 ```python
 sns.scatterplot(data=df, x="flipper_length_mm", y="body_mass_g", hue="species")
@@ -56,7 +65,7 @@ plt.title("Espèces de manchots")
 plt.show()
 ```
 
-## Graphique en barres
+### Graphique en barres
 
 ```python
 sns.barplot(data=df, x="species", y="body_mass_g")
@@ -64,7 +73,7 @@ plt.title("Masse corporelle moyenne par espèce")
 plt.show()
 ```
 
-## Graphique en boîte (boxplot)
+### Graphique en boîte (boxplot)
 
 ```python
 sns.boxplot(data=df, x="species", y="flipper_length_mm")
@@ -72,7 +81,7 @@ plt.title("Distribution des longueurs de nageoires")
 plt.show()
 ```
 
-## Histogramme avec `histplot`
+### Histogramme avec `histplot`
 
 ```python
 sns.histplot(data=df, x="body_mass_g", bins=20, kde=True)
@@ -80,7 +89,7 @@ plt.title("Répartition des masses")
 plt.show()
 ```
 
-## Corrélation avec `heatmap`
+### Corrélation avec `heatmap`
 
 ```python
 corr = df.corr(numeric_only=True)
@@ -89,7 +98,7 @@ plt.title("Matrice de corrélation")
 plt.show()
 ```
 
-## Facettage : plusieurs graphes par groupe
+### Facettage : plusieurs graphes par groupe
 
 ```python
 sns.relplot(data=df, x="flipper_length_mm", y="body_mass_g", hue="species", col="sex")

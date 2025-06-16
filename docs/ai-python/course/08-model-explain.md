@@ -75,7 +75,6 @@ y = 2 * x + 0
 
 Donc, pour `x = 5`, la prédiction est `y = 10`.
 
-
 ## Conclusion
 
 `LinearRegression` est un modèle simple mais puissant lorsqu'on pense qu'une **relation linéaire** existe entre les variables d'entrée et la cible. Il est rapide à entraîner et très utile pour l'interprétation des relations entre variables.
