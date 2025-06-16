@@ -51,12 +51,19 @@ from sklearn.preprocessing import OneHotEncoder
 # OneHotEncoder (Binaire)
 one_hot_encoder = OneHotEncoder()
 
-df= one_hot_encoder.fit_transform(df[['Categorie']])
+encoded_column = one_hot_encoder.fit_transform(df[['Categorie']])
+
+# Créer un DataFrame avec les noms de colonnes
+encoded_df = pd.DataFrame(encoded_column, columns=one_hot_encoder.get_feature_names_out(['Categorie']))
+
+# Fusionner avec les autres données
+df = df.join(encoded_df)
+
 ```
 
 ### Correspondance de la conversion
 
-| Categorie | Cat_0 | Cat_1 | Cat_2
+| Categorie | Categorie_Aventure | Categorie_Horreur | Categorie_Sci-Fi
 |-------|--------|--------|--------|
 | Aventure | 1 | 0 | 0 |
 | SciFi | 0 | 1 | 0 |
