@@ -1,7 +1,7 @@
 ---
 id: data-type
 title: Les types données
-sidebar_position: 8
+sidebar_position: 12
 ---
 
 # Rappel sur les types de données

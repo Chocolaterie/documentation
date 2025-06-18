@@ -1,7 +1,7 @@
 ---
 id: transformer
 title: Transfomer/Clean
-sidebar_position: 9
+sidebar_position: 11
 ---
 
 # Transformer des colonnes/données

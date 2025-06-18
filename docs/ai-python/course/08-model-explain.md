@@ -1,7 +1,7 @@
 ---
 id: model-scikit-learn
 title: Les modeles dans Scikit-learn
-sidebar_position: 8
+sidebar_position: 10
 ---
 
 # Comprendre le modèle `LinearRegression` de Scikit-learn
