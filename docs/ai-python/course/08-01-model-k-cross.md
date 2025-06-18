@@ -129,3 +129,36 @@ C’est plus équilibré et plus fiable qu’un seul test.
 | ------------- | --------------------------------------------------------- |
 | Leave-One-Out | Tu testes **1 fiche à la fois**, et tu recommences       |
 | K-Fold        | Tu testes **des petits groupes de fiches** à chaque fois |
+
+#### K-FOLD plus détaillé
+
+Exemple clair avec 10 données et K=5
+
+`D1, D2, D3, D4, D5, D6, D7, D8, D9, D10`
+
+Tu choisis K = 5, donc tu coupes en 5 groupes de 2 données :
+
+| Fold | Données |
+| ---- | ------- |
+| 1    | D1, D2  |
+| 2    | D3, D4  |
+| 3    | D5, D6  |
+| 4    | D7, D8  |
+| 5    | D9, D10 |
+
+**Ce qui se passe**
+
+Tu fais 5 tours (K=5) :
+
+| Tour | Données d’entraînement | Données de test |
+| ---- | ---------------------- | --------------- |
+| 1    | D3 → D10               | D1, D2          |
+| 2    | D1, D2, D5 → D10       | D3, D4          |
+| 3    | D1 → D4, D7 → D10      | D5, D6          |
+| 4    | D1 → D6, D9, D10       | D7, D8          |
+| 5    | D1 → D8                | D9, D10         |
+
+
+**Résumé**
+
+Avec K-Fold, tu entraînes K fois et tu testes K fois, mais chaque donnée n’est testée qu’une seule fois, et jamais dans le même fold.
