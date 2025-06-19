@@ -130,7 +130,7 @@ C’est plus équilibré et plus fiable qu’un seul test.
 | Leave-One-Out | Tu testes **1 fiche à la fois**, et tu recommences       |
 | K-Fold        | Tu testes **des petits groupes de fiches** à chaque fois |
 
-#### K-FOLD plus détaillé
+### K-FOLD plus détaillé
 
 Exemple clair avec 10 données et K=5
 
