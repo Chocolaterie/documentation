@@ -40,3 +40,32 @@ Exemple avec UIKit (avec npm install uikit)
   "node_modules/uikit/dist/js/uikit-icons.min.js"
 ]
 ```
+
+## Ajouter FontAwesome
+
+FontAwesome est un **framework CSS** qui permet d’utiliser une large bibliothèque d’icônes utiles.
+
+On peut par exemple l’installer avec `npm` et le lier à Angular comme on l’a fait avec UIKit.
+
+```bash
+npm install @fortawesome/fontawesome-free
+```
+
+:::warning Version gratuite
+
+Attention à bien utiliser la **version gratuite**, c’est celle utilisée dans cette fiche.
+
+:::
+
+```bash
+npm install @fortawesome/fontawesome-free
+```
+
+Dans le angular.json
+
+```json
+"styles": [
+    ...
+    "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+],
+```
