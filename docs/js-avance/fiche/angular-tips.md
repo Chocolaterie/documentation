@@ -57,10 +57,6 @@ Attention à bien utiliser la **version gratuite**, c’est celle utilisée dans
 
 :::
 
-```bash
-npm install @fortawesome/fontawesome-free
-```
-
 Dans le angular.json
 
 ```json
