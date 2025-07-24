@@ -69,3 +69,89 @@ Dans le angular.json
     "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
 ],
 ```
+
+## Binding
+
+`ngModel` permet de lier des attributs de votre contrôleur TypeScript à la vue.
+
+Le binding peut se faire en **unidirectionnel** ou en **bidirectionnel** :
+
+- **Unidirectionnel** : lecture seule (les données vont du contrôleur vers la vue).
+- **Bidirectionnel** : lecture/écriture (les données peuvent être modifiées depuis la vue).
+
+La liaison bidirectionnelle est typiquement utilisée dans les formulaires.
+
+### Syntaxe d’exemple
+
+**Unidirectionnel :**
+```html
+[ngModel]="user.email"
+```
+
+**Bidirectionnel :**
+```html
+[(ngModel)]="user.email"
+```
+
+## Localization (i18n)
+
+Vous pouvez utiliser **ngx-translate** pour gérer les traductions de votre application Angular avec des fichiers au format JSON.
+
+Documentation officielle : [https://ngx-translate.org/](https://ngx-translate.org/)
+
+---
+
+### Étapes
+
+### 1. Installer la bibliothèque
+
+```bash
+npm install @ngx-translate/core @ngx-translate/http-loader
+```
+
+---
+
+### 2. Ajouter la configuration dans `app.component.ts`
+
+#### Imports nécessaires :
+
+```ts
+import { TranslateService } from '@ngx-translate/core';
+import translationsEN from '../assets/i18n/en.json';
+```
+
+#### Dans le constructeur de l’App :
+
+```ts
+constructor(private translate: TranslateService) {
+  this.translate.addLangs(['fr', 'en']);
+  this.translate.setDefaultLang('en');
+  this.translate.use('en');
+  this.translate.setTranslation('en', translationsEN);
+}
+```
+
+---
+
+### 3. Exemple de fichier de traduction `en.json`
+
+```json
+{
+  "title.login": "Login",
+  "btn.login": "Log in"
+}
+```
+
+---
+
+### 4. Utilisation dans la vue Angular
+
+```html
+<legend class="uk-legend">{{ 'title.login' | translate }}</legend>
+```
+
+C’est cette syntaxe qui permet d’afficher un texte traduit :
+
+```html
+{{ 'title.login' | translate }}
+```
