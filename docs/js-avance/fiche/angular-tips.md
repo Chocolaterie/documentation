@@ -108,7 +108,7 @@ npm install @ngx-translate/core @ngx-translate/http-loader
 
 ---
 
-### 2. Ajouter la configuration dans `app.component.ts`
+### 2. Ajouter la configuration dans `app.component.ts` ou `app.ts`
 
 #### Imports nécessaires :
 
