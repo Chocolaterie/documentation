@@ -117,6 +117,21 @@ import { TranslateService } from '@ngx-translate/core';
 import translationsEN from '../assets/i18n/en.json';
 ```
 
+#### Dans app.config.ts
+
+Ajouter le provider pour la traduction dans  app.config.ts
+
+```ts
+export const appConfig: ApplicationConfig = {
+    providers: [
+        ....
+        provideTranslateService({
+            defaultLanguage: 'en'
+        })
+    ]
+};
+```
+
 #### Dans le constructeur de l’App :
 
 ```ts
@@ -128,7 +143,6 @@ constructor(private translate: TranslateService) {
 }
 ```
 
----
 
 ### 3. Exemple de fichier de traduction `en.json`
 
