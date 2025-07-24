@@ -3,6 +3,7 @@ id: angular-tips
 title: Tips Angular
 sidebar_label: Tips  Angular
 description: Tips pour Angular
+sidebar_position: 5
 ---
 
 ## Ajouter framework CSS

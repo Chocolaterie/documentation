@@ -3,6 +3,7 @@ id: installation-angular
 title: Installation d'Angular
 sidebar_label: Installer Angular
 description: Guide pour installer Angular sur votre machine
+sidebar_position: 4
 ---
 
 ## Prérequis
