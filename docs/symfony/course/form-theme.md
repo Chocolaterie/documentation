@@ -1,7 +1,7 @@
 ---
-title: Installer PHP & Symfony
+title: Customiser un formulaire
 
-sidebar_position: 1
+sidebar_position: 3
 ---
 
 # Customiser formulaire
