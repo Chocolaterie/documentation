@@ -41,6 +41,14 @@ class Contact
 
 ### Étape 2 : Créer une classe de formulaire
 
+Générer le formulaire le php
+
+```bash
+php bin/console make:form
+```
+
+Le code sur formulaire généré ressemble à :
+
 ```php
 class ContactType extends AbstractType
 {
@@ -61,13 +69,16 @@ class ContactType extends AbstractType
 }
 ```
 
+On peut enlever dans le builder les champs à ne pas afficher le front:
+- Exemple : une date de création ou modification
+
 ### Étape 3 : Utiliser le formulaire dans un contrôleur
 
 ```php
 class ContactController extends AbstractController
 {
     #[Route('/contact', name: 'contact')]
-    public function index(Request $request): Response
+    public function index(Request $request, EntityManagerInterface $em): Response
     {
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
@@ -76,11 +87,13 @@ class ContactController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             // Enregistrer ou traiter les données
-            // $entityManager = $this->getDoctrine()->getManager();
-            // $entityManager->persist($contact);
-            // $entityManager->flush();
+            // $em->persist($contact);
+            // $em->flush();
 
+            // Message temporaire success
             $this->addFlash('success', 'Message envoyé !');
+            
+            // Rédiriger
             return $this->redirectToRoute('contact');
         }
 
@@ -91,7 +104,43 @@ class ContactController extends AbstractController
 }
 ```
 
+:::warning Flash Message
+
+A vous de le designer de votre base.html.twig par exemple
+
+```html
+{#  Pour chaque type de message temporaire (ex: [success, [messages]] #}
+{% for label, messages in app.flashes %}
+    {#  Pour chaque message j'affiche une alert. ex: [Virement effectué, Connecté] #}
+    {% for message in messages %}
+        <div class="uk-alert-{{ label }}" uk-alert>
+            <a href class="uk-alert-close" uk-close></a>
+            <p>{{ message }}</p>
+        </div>
+    {% endfor %}
+{% endfor %}
+```
+:::
+
+
 ### Étape 4 : Créer le template Twig
+
+La moins découpé :
+
+```twig
+{# Ouvrir le formulaire #}
+{{ form_start(form) }}
+
+{# Afficher tout les champs #}
+{{ form_widget(form) }}
+
+<button type="submit">Envoyer</button>
+
+{# Fermer le formulaire #}
+{{ form_end(form) }}
+```
+
+Découpé :
 
 ```twig
 {# templates/contact/index.html.twig #}
