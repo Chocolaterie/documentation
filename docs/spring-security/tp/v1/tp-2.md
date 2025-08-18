@@ -37,7 +37,7 @@ Un article contient au moins:
 
 ## Architecture visuelle
 
-![Diagram](img/tp_2_archi_sql.png)
+![Diagram](../img/tp_2_archi_sql.png)
 
 ## Delete
 

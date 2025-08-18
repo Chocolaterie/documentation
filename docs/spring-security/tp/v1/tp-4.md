@@ -26,12 +26,12 @@ L'achèvement de l'implémentation **MySQL** pourrait être envisagé uniquement
 
 ## Ajouter un Article
 
-![Diagram](img/tp_04_add_article.png)
+![Diagram](../img/tp_04_add_article.png)
 
 
 ## Editer un Article
 
-![Diagram](img/tp_04_edit_article.png)
+![Diagram](../img/tp_04_edit_article.png)
 
 :::warning Spring Security
 

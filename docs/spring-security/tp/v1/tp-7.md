@@ -28,8 +28,8 @@ Une fois terminé pour tester vous pourrez :
 
 ### Vous connecter pour récupérer le token :
 
-![Diagram](img/tp_07_get_token.png)
+![Diagram](../img/tp_07_get_token.png)
 
 ### Supprimer un article en s'authentifiant via le token récupéré :
 
-![Diagram](img/tp_07_delete_use_token.png)
+![Diagram](../img/tp_07_delete_use_token.png)

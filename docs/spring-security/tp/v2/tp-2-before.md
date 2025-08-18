@@ -4,52 +4,53 @@ sidebar_position: 2
 
 # TP Eni Store API (Partie 2 - Before)
 
-> **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les modules 1 à 2 et d’avoir réalisé les TP proposés.
+> **Prérequis** : Avoir complété les modules 1 et 2 ainsi que les TP associés.
 
-**Durée Estimée : 1H-2H**
+**Durée estimée : 1h à 2h**
 
-## Enonce
+---
 
-Il sera nécessaire de créer les éléments suivants :
+## Énoncé
 
-- **Article** : La classe **Article** dans le package **BO**
-- **ArticleService** : La couche métier (ou service/BLL) qui fera appel à la **DAO**
-- **ArticleRestController** : Ce contrôleur contiendra les **routes API** pour le CRUD d'un article (donc 3 routes)
+L’objectif de ce TP est de mettre en place la gestion des **Articles** dans l’application.  
+Vous allez implémenter les éléments suivants :
 
-Un article contient au moins:
-- Id
-- Title
+- **Article** : Classe métier dans le package **BO**
+- **ArticleDAO** : Couche DAO (non abstraite pour l’instant), qui gère les données en mémoire
+- **ArticleService** : Couche métier (BLL/Service) qui communique avec la DAO
+- **ArticleRestController** : Contrôleur REST exposant les **routes API** pour le CRUD d’un article
 
-## Les services :
- 
-- getAll
-- getId(id)
-- delete(id)
-- save(Article)
+Un article comporte au minimum :
+- **id** : `int`
+- **title** : `String`
 
-### getAll
+## Services à implémenter
 
-- Code : 202
+- `getAll()`
+- `getId(id)`
+- `delete(id)`
+- `save(Article)`
 
-### getId
+### Détails des services et codes retour
 
-- Si on trouve : Code : 202
-- Si on trouve pas Code : 703
+#### getAll
+- Réponse : **Code 202**
+
+#### getId
+- Si l’article est trouvé : **Code 202**
+- Si l’article n’est pas trouvé : **Code 703**
 
 #### delete
+- Si l’article est supprimé : **Code 202**
+- Si l’article n’existe pas : **Code 703**
 
-- Si on trouve : Code : 202
-- Si on trouve pas Code : 703
+#### save
+- Si l’id n’existe pas :
+    - Création réussie → **Code 202**
+- Si l’id existe déjà :
+    - Mise à jour réussie → **Code 203**
 
-### save
+## Gestion des données
 
-- Si l'id de l'article n'existe :
-    - Si créee avec succès : Code 202
-- Si id existe
-    - Si update avec succès : Code 202
-
-## Gérer les données
-
-Pour gérer les faux articles, vous allez avoir par défaut dans le Service une liste de 3 Articles
-
-Pour faire de la recherche utilisez les `stream` et `predicate` en java
+Pour tester votre API, la couche **Service** doit contenir par défaut une liste de **3 articles**.  
+Les opérations de recherche et de filtrage devront utiliser les **`Stream`** et **`Predicate`** de Java.

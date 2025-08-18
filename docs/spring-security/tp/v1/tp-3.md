@@ -30,7 +30,7 @@ Il sera nécessaire de modifier les éléments suivants :
 
 ## Architecture visuelle
 
-![Diagram](img/tp_3_archi_mongodb.png)
+![Diagram](../img/tp_3_archi_mongodb.png)
 
 ## Tester
 

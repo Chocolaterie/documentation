@@ -24,4 +24,4 @@ Il peut être nécessaire de modifier le fichier gradle et le fichier applicatio
 
 ## Exemple de résultat attendu
 
-![Diagram](img/tp_05_swagger_result_example.png)
+![Diagram](../img/tp_05_swagger_result_example.png)

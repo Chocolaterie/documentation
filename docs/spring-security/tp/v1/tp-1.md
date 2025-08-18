@@ -16,7 +16,7 @@ Dans un premier temps, nous allons mettre en place le projet avec au moins une r
 
 Vous pouvez déjà créer ces sous-packages pour préparer la structure de votre projet.
 
-![Diagram](img/tp_1_packages.png)
+![Diagram](../img/tp_1_packages.png)
 
 ### Procédure d'initialisation du projet
 
@@ -26,7 +26,7 @@ Pour creer le projet vous pouvez suivre ces etapes
 
 Configurer votre projet via cette URL :  https://start.spring.io/
 
-![Diagram](img/tp_1_spring_initializr.png)
+![Diagram](../img/tp_1_spring_initializr.png)
 
 Après le téléchargement, décompressez le projet en dehors de workspace (attention surtout si vous utilisez Eclipse !)
 
