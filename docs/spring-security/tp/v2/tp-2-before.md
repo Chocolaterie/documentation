@@ -42,17 +42,17 @@ A vous de créer les fonctions DAO mocks selon vos besoins métier.
 
 #### getId
 - Si l’article est trouvé : **Code 202** | Data: L'article trouvé
-- Si l’article n’est pas trouvé : **Code 703** | Data : null
+- Si l’article n’est pas trouvé : **Code 703** | Data  null
 
 #### delete
-- Si l’article est supprimé : **Code 202** | Data : null
-- Si l’article n’existe pas : **Code 703** | Data : null
+- Si l’article est supprimé : **Code 202** | Data: null
+- Si l’article n’existe pas : **Code 703** | Data: null
 
 #### save
 - Si l’id n’existe pas :
-    - Création réussie → **Code 202** | Data : L'article crée
+    - Création réussie → **Code 202** | Data: L'article crée
 - Si l’id existe déjà :
-    - Mise à jour réussie → **Code 203** | Data : : L'article modifié
+    - Mise à jour réussie → **Code 203** | Data: L'article modifié
 
 ## Gestion des données
 
