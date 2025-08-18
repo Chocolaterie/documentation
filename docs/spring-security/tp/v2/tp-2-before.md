@@ -24,6 +24,10 @@ Un article comporte au minimum :
 - **id** : `int`
 - **title** : `String`
 
+## DAO
+
+A vous de créer les fonctions DAO mocks selon vos besoins métier.
+
 ## Services à implémenter
 
 - `getAll()`
@@ -34,23 +38,32 @@ Un article comporte au minimum :
 ### Détails des services et codes retour
 
 #### getAll
-- Réponse : **Code 202**
+- Réponse : **Code 202** | Data: La liste des articles
 
 #### getId
-- Si l’article est trouvé : **Code 202**
-- Si l’article n’est pas trouvé : **Code 703**
+- Si l’article est trouvé : **Code 202** | Data: L'article trouvé
+- Si l’article n’est pas trouvé : **Code 703** | Data : null
 
 #### delete
-- Si l’article est supprimé : **Code 202**
-- Si l’article n’existe pas : **Code 703**
+- Si l’article est supprimé : **Code 202** | Data : null
+- Si l’article n’existe pas : **Code 703** | Data : null
 
 #### save
 - Si l’id n’existe pas :
-    - Création réussie → **Code 202**
+    - Création réussie → **Code 202** | Data : L'article crée
 - Si l’id existe déjà :
-    - Mise à jour réussie → **Code 203**
+    - Mise à jour réussie → **Code 203** | Data : : L'article modifié
 
 ## Gestion des données
 
-Pour tester votre API, la couche **Service** doit contenir par défaut une liste de **3 articles**.  
-Les opérations de recherche et de filtrage devront utiliser les **`Stream`** et **`Predicate`** de Java.
+
+:::warning Attention
+
+Si vous avez pas le temps :
+
+- Pour tester votre API, la couche **Service** peut contenir par défaut une liste de **3 articles**.
+
+:::
+
+
+Les opérations de recherche et de filtrage devront utiliser les **`Stream`** et/out **`Predicate`** de Java.
