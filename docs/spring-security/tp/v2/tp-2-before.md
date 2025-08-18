@@ -56,7 +56,6 @@ A vous de créer les fonctions DAO mocks selon vos besoins métier.
 
 ## Gestion des données
 
-
 :::warning Attention
 
 Si vous avez pas le temps :

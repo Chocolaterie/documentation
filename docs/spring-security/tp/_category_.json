@@ -1,8 +1,8 @@
 {
-  "label": "TP (V1)",
+  "label": "Travaux Pratiques",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "TP Version Obsoletes"
+    "description": "TP"
   }
 }

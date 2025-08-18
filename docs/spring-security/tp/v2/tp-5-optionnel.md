@@ -1,10 +1,10 @@
 ---
-sidebar_position: 4
+sidebar_position: 6
 ---
 
-# TP Eni Store API - JPA MySQL (Partie 4)
+# TP Eni Store API -  (Partie 5 JPA MySQL ) OPTIONNEL
 
-> **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les modules 1 à 4 et d’avoir réalisé les TP proposés.
+> **Note:** Avant de démarrer ce TP, il convient d’avoir réalisé les TP proposés.
 
 **Durée Estimée : 30min**
 

@@ -1,8 +1,8 @@
 {
-  "label": "(V2)",
-  "position": 0,
+  "label": "TP (V2)",
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "TP"
+    "description": "Version plus avancés du TP"
   }
 }
