@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# TP Eni Store API (Partie 2 - Before)
+# TP Eni Store API - Partie 2
 
 > **Prérequis** : Avoir complété les modules 1 et 2 ainsi que les TP associés.
 

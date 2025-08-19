@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# TP Eni Store API (Partie 1)
+# TP Eni Store API - Partie 1 Installation
 
 > **Note:** Avant de démarrer ce TP, il convient d’avoir suivi les modules 1 à 2 et d’avoir réalisé les TP proposés.
 

@@ -2,7 +2,7 @@
 sidebar_position: 3
 ---
 
-# TP Eni Store API (Partie 3 - Messages)
+# TP Eni Store API - Partie 3 Messages
 
 > **Prérequis** : Avoir complété les modules 1 et 2 ainsi que les TP associés.
 

@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# TP Eni Store API (Partie 4 - Tests)
+# TP Eni Store API - Partie 4 Tests
 
 > **Prérequis** : Avoir complété les TP précédents.
 

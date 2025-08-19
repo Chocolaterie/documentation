@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-# TP Eni Store API (Partie 5 - MongoDB)
+# TP Eni Store API - Partie 6 MongoDB
 
 > **Prérequis** : Avoir complété les TP précédents.
 
