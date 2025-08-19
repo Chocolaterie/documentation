@@ -24,9 +24,7 @@ Vous devez mettre en place un mécanisme permettant de traduire les messages en 
 ## Mise en place de l’internationalisation
 
 Pour gérer la traduction des messages métier, vous pouvez :
-- Copier le fichier `LocaleConfig` de la démo
-- Copier le fichier `MessageHelper` de la démo
-- Utiliser le `MessageHelper` dans vos **services** pour obtenir le message dans la langue souhaitée
+- Copier le fichier `LocaleHelper` de la démo
 
 ## Messages attendus
 
