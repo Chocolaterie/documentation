@@ -43,32 +43,62 @@ String token = Jwts.builder()
 String token = authorization.substring(7);
 
 try {
-    Claims claims = Jwts.parser()
-            .setSigningKey(getKey()).build()
-            .parseClaimsJws(token)
-            .getBody();
+   // Outil pour récupérer le token (déchiffrer)
+    JwtParser jwtParser = Jwts.parser().setSigningKey(key).build();
+
+    // -- récupérer les claims de mon token (claims => toutes les info)
+    Claims claims = jwtParser.parseSignedClaims(token).getBody();
     
-    
-    // -- récupérer la date d'expiration
-    Function<Claims, Date> expirationFunction = Claims::getExpiration;
-    Date expirationData = expirationFunction.apply(claims);
+    // Récupérer la date
+    // 1: Version abstraite
+    // Function<Claims, Date> expirationFunction = Claims::getExpiration;
+    // Date expirationDate = expirationFunction.apply(claims);
+    // 2: Version explicite
+    Date expirationDate = claims.getExpiration();
     
  } catch (Exception e) {
-            // Si la date d'expiration est depassé alors
-            // Si exception jwt de type expiration
-            if (e instanceof ExpiredJwtException){
-                return "Token expiré";
-            }
+    // Si la date d'expiration est depassé alors
+    // Si exception jwt de type expiration
+    if (e instanceof ExpiredJwtException){
+        return "Token expiré";
+    }
 
-            // Si token malformé
-            if (e instanceof MalformedJwtException){
-                return "Token malformé";
-            }
+    // Si token malformé
+    if (e instanceof MalformedJwtException){
+        return "Token malformé";
+    }
 
-            return "Erreur inconnue";
-        }
+    return "Erreur inconnue";
+}
 
 return "Token valide";
+```
+
+## Externaliser l'accès à la clé secrète
+
+Voici un exemple pour déporter l'accès à la clé secrète avec la valeur de la clé stocker dans un fichier config
+
+```java
+/**
+ * Récupérer la valeur de app.jwt.secret dans application.properties
+ */
+@Value("${app.jwt.secret}")
+private String SECRET_KEY;
+
+private Key getSecretKey() {
+    // convertir un string en base 64
+    byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
+    // convertir une base 64 en Key
+    Key key = Keys.hmacShaKeyFor(keyBytes);
+
+    return key;
+}
+```
+
+Evidement cela veut dire que dans votre application.properties (dans notre cas en tout cas) vous avez bien :
+
+```
+app.jwt.secret=69636e783529213d5722613b2b336c793371666524684a3445226e5573
 ```
 
 ![Diagram](img/ex_rest_authorization_1.png)
