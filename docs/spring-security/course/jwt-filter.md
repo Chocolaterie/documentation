@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# JWT
+# JWT (version que Filter)
 
 ## Dépendances
 
