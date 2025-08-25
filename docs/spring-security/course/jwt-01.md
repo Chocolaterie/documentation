@@ -100,5 +100,3 @@ Evidement cela veut dire que dans votre application.properties (dans notre cas e
 ```
 app.jwt.secret=69636e783529213d5722613b2b336c793371666524684a3445226e5573
 ```
-
-![Diagram](img/ex_rest_authorization_1.png)
