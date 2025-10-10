@@ -68,7 +68,35 @@ movies = [
 
 ## Template de page
 
-Si vous ne souhaitez pas vous embêter à créer votre propre `app.component.html`, vous pouvez récupérer le mien.
+Si vous ne souhaitez pas vous embêter à créer votre propre `index.html`, vous pouvez récupérer le miens.
+
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TP</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="/uikit/css/uikit.min.css" />
+
+  <!-- UIkit JS -->
+  <script src="/uikit/js/uikit.min.js"></script>
+  <script src="/uikit/js/uikit-icons.min.js"></script>
+
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>
+
+```
+
+Si vous ne souhaitez pas vous embêter à créer votre propre `app.component.html`, vous pouvez récupérer le miens.
 
 ```html
 <!DOCTYPE html>

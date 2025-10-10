@@ -108,7 +108,7 @@ Si vous ne souhaitez pas vous embêter à créer votre propre `app.html`, vous p
   <div class="uk-container uk-container-expand">
     <nav class="uk-navbar" id="navbar" data-uk-navbar>
       <div class="uk-navbar-center">
-        <a class="uk-navbar-item uk-logo" href="#">ENI Movie</a>
+        <a class="uk-navbar-item uk-logo" href="#">App Movie</a>
       </div>
     </nav>
   </div>
