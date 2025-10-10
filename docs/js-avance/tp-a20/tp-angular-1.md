@@ -10,13 +10,18 @@ sidebar_position: 1
 
 Vous devez créer une page Angular pour afficher la liste de films.
 
-- Créez un composant `movie-list`.
-- Pour le moment, simulez une liste de 3 films dans le contrôleur TypeScript afin d’afficher un aperçu dans le HTML.
+- Créez un composant `movie-list-page` (c'est une page):
+
+```
+ng generate component pages/movie-list-page
+```
+
+- Pour le moment, simulez une liste de 3 films dans le contrôleur **TypeScript** afin d’afficher un aperçu dans le HTML.
 - Liez ce composant à une URL comme `/movies`.
-- Une proposition de la liste des films dans le contrôleur.
+- Une proposition de la liste des films dans le contrôleur (le Typescript de la page).
 
 ```ts
-movies = [
+public movies = [
   {
     id: 1,
     slug: "1",
