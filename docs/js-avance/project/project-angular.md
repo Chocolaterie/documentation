@@ -34,6 +34,54 @@ L’application devra comporter les fonctionnalités suivantes :
 
 Chaque fonctionnalité devra être accessible via le **système de routing Angular**, avec une navigation claire et un contrôle d’accès (auth guard).
 
+#### Proposition ordre (par difficulté) :
+
+- **Liste des articles**
+- **Détail d’un article** : url avec /:id
+- **Suppression d’un article**
+- Page de **connexion**
+- Page **Ajout et modification d’un article**
+- Page de **connexion**
+- Page d’**inscription**
+- Page de **mot de passe oublié**
+- Les autres pages
+
+#### Détail d'un Article
+
+Scénario :
+- Tu cliques sur un article
+- Pour naviguer dans la page détail de l'article (utiliser [routerLink])
+
+#### Suppression d’un article
+
+Scénario:
+- Quand tu cliques sur le bouton supprimer
+- Appeler le service pour Delete (pas de page liée à la suppréssion)
+- Aprés appel service, deux choix :
+  - Refresh la page (comme un F5)
+  - Supprimer en temps réel l'article dans la liste (Plus compliqué)
+
+## Arborescence
+
+### Par type de fichier
+
+- src/app/
+  - pages/
+    - Toutes les pages
+  - services/
+    - Tous les services
+    
+### Par module
+
+- src/app/
+  - article/
+    - pages/
+    - services/
+  - auth/
+    - pages/
+    - services/
+
+
 ## Exigences techniques
 
 - Version Angular : **v20**
@@ -42,10 +90,6 @@ Chaque fonctionnalité devra être accessible via le **système de routing Angul
 - Utilisation des **Formulaires Réactifs**
 - Gestion des routes et sous-modules avec **RouterModule**
 - Utilisation des **services Angular** pour la communication avec l’API
-- Structuration du projet selon une architecture modulaire :
-  - `auth/` : gestion de l’authentification
-  - `articles/` : gestion du catalogue d’articles
-  - `shared/` : composants et services réutilisables
 
 ## Critères d’évaluation
 
