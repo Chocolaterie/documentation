@@ -8,7 +8,6 @@ sidebar_position: 1
 **Niveau : Intermédiaire à Avancé**  
 **Technologies : Angular 20, TypeScript, RxJS, API REST**
 
-
 ## Objectif du projet
 
 Développer une application **Angular 20** complète permettant la gestion d’un catalogue d’articles.  
@@ -16,6 +15,34 @@ L’application devra communiquer avec une **API REST locale** disponible à l�
 [https://github.com/Chocolaterie/ApiArticle](https://github.com/Chocolaterie/ApiArticle)
 
 L’objectif est de mettre en œuvre les concepts fondamentaux d’Angular : composants, routing, formulaires réactifs, services, communication HTTP et gestion d’état.
+
+## Information
+
+Vous n'avez pas besoin de toucher au Back-End **ApiArticle**, c'est une application qu'on lance via le terminal
+pour avoir accès aux ressources JSON.
+
+Votre rôle est de développer uniquement le **Front-End** (donc uniquement la partie **Angular**).
+
+Pour rappel concernant un projet Angular :
+- On ne le crée jamais à la main, mais via la ligne de commande `ng new mon-projet-angular`
+- Les fichiers comme les services, pages ou composants ne sont jamais créés à la main, mais avec les lignes de commande `ng generate quelquechose mon-quelquechose` (à voir dans les slides, sur Internet, dans la documentation ou avec ChatGPT)
+
+
+![Screenshot](projet-angular-diag-1.png)
+
+### Quelques rappels
+
+#### Creer un projet
+
+`ng new mon projet`
+
+#### Creer une page
+
+`ng generate component pages/ma-page`
+
+#### Creer un service
+
+`ng generate service services/mon-service`
 
 ## Spécifications fonctionnelles
 
