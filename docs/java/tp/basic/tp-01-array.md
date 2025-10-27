@@ -54,13 +54,19 @@ Créez un tableau contenant les ventes (type `double`) pour 7 jours.
 Utilisez des valeurs réalistes, par exemple entre 50 et 300 euros.
 
 **Indications :**
-- Utilisez la syntaxe `double[] nom = {...};`  
+- Utilisez la syntaxe `double[] nom = {...};`  ou `double[] nom = new double [longueur];`
 - Affichez la taille du tableau (`.length`)  
 - Testez votre affichage avec une boucle `for`
 
 ```java
 // Example of array declaration
 double[] sales = { /* enter your 7 daily sales here */ };
+
+// Example of array declaration
+double[] sales = new double[7];
+/*
+ Put values for each index manually
+*/
 
 // Example of loop structure (to complete)
 for (int i = 0; i < sales.length; i++) {
