@@ -10,28 +10,9 @@ sidebar_position: 7
 
 ## Énoncé
 
-Dans cette partie, vous allez mettre en place le système **JWT** en vous basant sur la démo.  
-Cela implique la création de plusieurs classes et l’ajout de configurations spécifiques dans **Spring Security**.
+Dans cette partie, vous allez mettre en place le système **JWT** en vous basant sur la démo.
 
 Soyez attentifs lors de la reproduction de la démo afin d’éviter les erreurs.
-
-:::warning Attention
-Il est essentiel de rester rigoureux dans la création des classes et des méthodes.
-- Relisez attentivement votre code
-- Vérifiez les annotations
-- Assurez-vous que les noms de fonctions sont correctement adaptés
-
-La majorité des erreurs rencontrées dans ce TP sont dues à des oublis ou des imprécisions.
-:::
-
-### Protéger une route
-
-Nous allons également en profiter pour restreindre l'accès à la route **DELETE** /api/articles/id uniquement aux administrateurs (**ROLE_ADMIN**).
-
-:::info Rappel
-Les URLs utilisées dans la démo et les captures d’écran sont données à titre d’exemple.  
-Vous êtes libres de définir vos propres routes.
-:::
 
 ## Pour tester
 
@@ -41,6 +22,40 @@ Une fois terminé pour tester vous pourrez :
 
 ![Diagram](../img/tp_07_get_token.png)
 
+### Tester que le token est valide
+
+Créer une URL pour vérifier que le token est valide
+
+PS/ Pour le moment le token dans le paramètre de l'url
+
+![Diagram](../img/tp_07_verify_token.png)
+
+### Protéger une route
+
+#### Résumé
+
+Cela implique la création de plusieurs classes et l’ajout de configurations spécifiques dans **Spring Security**.
+
+#### Objectif
+
+Nous allons également en profiter pour restreindre l'accès à la route **DELETE** /api/articles/id uniquement aux administrateurs (**ROLE_ADMIN**).
+
+:::info Rappel
+Les URLs utilisées dans la démo et les captures d’écran sont données à titre d’exemple.  
+Vous êtes libres de définir vos propres routes.
+:::
+
+
+
 ### Supprimer un article en s'authentifiant via le token récupéré :
 
 ![Diagram](../img/tp_07_delete_use_token.png)
+
+:::warning Attention
+Il est essentiel de rester rigoureux dans la création des classes et des méthodes.
+- Relisez attentivement votre code
+- Vérifiez les annotations
+- Assurez-vous que les noms de fonctions sont correctement adaptés
+
+La majorité des erreurs rencontrées dans ce TP sont dues à des oublis ou des imprécisions.
+:::
