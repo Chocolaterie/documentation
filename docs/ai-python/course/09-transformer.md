@@ -13,7 +13,7 @@ Comment convertir une colonne textuelle en **index numérique** sans utiliser de
 - **Encodage en identifiant (index)** : chaque valeur textuelle devient un entier unique (comme une clé étrangère en base de données).
 - **Encodage binaire (One-Hot)** : chaque valeur textuelle devient une colonne distincte avec 1 ou 0 (présent / absent).
 
-## LabelEncoder — Encodage en identifiant
+## LabelEncoder - Encodage en identifiant
 
 ```py
 import pandas as pd
@@ -39,7 +39,7 @@ df['CatId'] = label_encoder.fit_transform(df['Categorie'])
 
 :::warning Rappel
 
-**LabelEncoder** assigne un entier par valeur unique. Attention : ces entiers ont un ordre arbitraire — à n'utiliser **que si l'ordre n'a pas de sens** pour le modèle.
+**LabelEncoder** assigne un entier par valeur unique. Attention : ces entiers ont un ordre arbitraire - à n'utiliser **que si l'ordre n'a pas de sens** pour le modèle.
 
 :::
 

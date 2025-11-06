@@ -20,7 +20,7 @@ Chaque personnage possède plusieurs **attributs**, mais leur nombre et leur nat
 L’objectif est d’apprendre à gérer ces attributs de manière **dynamique**, à l’aide d’une classe dédiée et de listes.
 
 
-## Étape 1 — Classe `Attribute`
+## Étape 1 - Classe `Attribute`
 
 Créer une classe `Attribute` qui représente un **attribut individuel** d’un personnage.
 
@@ -41,7 +41,7 @@ métier : archère
 
 
 
-## Étape 2 — Classe `Character`
+## Étape 2 - Classe `Character`
 
 Créer une classe `Character` représentant un personnage.
 
@@ -64,7 +64,7 @@ Attributs :
 
 
 
-## Étape 3 — Classe `Hero` (héritage)
+## Étape 3 - Classe `Hero` (héritage)
 
 Créer une classe `Hero` qui hérite de `Character`.
 
@@ -87,7 +87,7 @@ Attributs :
 
 
 
-## Étape 4 — Classe `Monster` (héritage)
+## Étape 4 - Classe `Monster` (héritage)
 
 Créer une classe `Monster` qui hérite également de `Character`.
 
@@ -109,7 +109,7 @@ Attributs :
 
 
 
-## Étape 5 — Manipulation de plusieurs personnages
+## Étape 5 - Manipulation de plusieurs personnages
 
 Créer une classe `TPRpgAttribute` contenant une méthode `main()`.
 
@@ -142,7 +142,7 @@ Attributs :
 
 
 
-## Étape 6 — Pour aller plus loin (facultatif)
+## Étape 6 - Pour aller plus loin (facultatif)
 
 - Ajouter une méthode pour modifier ou supprimer un attribut  
 - Trier la liste des personnages selon un critère (nom, type, etc.)  

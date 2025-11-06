@@ -6,7 +6,7 @@ sidebar_position: 8
 
 # Surentraînement (Overfitting)
 
-Quand on entraîne un modèle d’intelligence artificielle, on veut qu’il **apprenne à généraliser** — c’est-à-dire **bien prédire sur de nouvelles données** qu’il n’a jamais vues.
+Quand on entraîne un modèle d’intelligence artificielle, on veut qu’il **apprenne à généraliser** - c’est-à-dire **bien prédire sur de nouvelles données** qu’il n’a jamais vues.
 
 Mais parfois, le modèle **apprend trop bien les exemples du passé**, au point de **mémoriser les réponses au lieu de comprendre la logique**.  
 On appelle ça le **surentraînement**, ou **overfitting**.

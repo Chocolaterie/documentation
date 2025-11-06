@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Project Angular 20 — Gestion d’Articles
+# Project Angular 20 - Gestion d’Articles
 
 **Durée estimée : 2 jours**  
 **Niveau : Intermédiaire à Avancé**  

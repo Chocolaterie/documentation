@@ -9,7 +9,6 @@ Créer une petite application Java pour gérer un inventaire de jeu vidéo sans 
 
 **Durée estimée : 1 heure**
 
----
 
 ## Fonctionnalités à Implémenter
 
@@ -17,7 +16,6 @@ Créer une petite application Java pour gérer un inventaire de jeu vidéo sans 
 2. **Afficher l'inventaire** : Lister tous les objets ajoutés.
 3. **Supprimer un objet** : Retirer un objet existant.
 
----
 
 ## Étape 1 : Déclaration de la Classe `Item`
 
@@ -27,8 +25,6 @@ Créer une petite application Java pour gérer un inventaire de jeu vidéo sans 
 - Ajoutez un **constructeur** pour initialiser ces attributs.
 - Créez des **méthodes d'accès** (getters) et de **modification** (setters) pour ces attributs.
 - Implémentez une méthode `toString()` pour afficher les détails d'un objet sous forme de texte.
-
----
 
 ## Étape 2 : Gestion de l'Inventaire
 
@@ -44,8 +40,6 @@ Créer une petite application Java pour gérer un inventaire de jeu vidéo sans 
 
 **Conseil :** Utilisez des boucles pour parcourir la liste et cherchez un objet par son nom.
 
----
-
 ## Étape 3 : Programme Principal
 
 **Instructions :**
@@ -58,7 +52,6 @@ Créer une petite application Java pour gérer un inventaire de jeu vidéo sans 
 
 **Conseil :** Commencez par ajouter quelques objets simples, affichez-les, puis supprimez-en un et affichez à nouveau la liste.
 
----
 
 ## Résultats Attendus
 - **Ajout d'objets** : L'inventaire stocke et affiche les objets.
