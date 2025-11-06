@@ -1,6 +1,6 @@
 {
-  "label": "TP (Basic)",
-  "position": 10,
+  "label": "TP (Observable)",
+  "position": 14,
   "link": {
     "type": "generated-index",
     "description": "Les travaux pratiques"

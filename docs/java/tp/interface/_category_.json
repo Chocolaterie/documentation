@@ -1,6 +1,6 @@
 {
-  "label": "TP (Basic)",
-  "position": 10,
+  "label": "TP (Interfaces)",
+  "position": 12,
   "link": {
     "type": "generated-index",
     "description": "Les travaux pratiques"

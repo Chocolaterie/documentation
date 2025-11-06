@@ -1,6 +1,6 @@
 {
-  "label": "TP (Basic)",
-  "position": 10,
+  "label": "TP (Inventory)",
+  "position": 16,
   "link": {
     "type": "generated-index",
     "description": "Les travaux pratiques"

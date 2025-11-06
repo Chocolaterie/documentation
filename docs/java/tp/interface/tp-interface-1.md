@@ -9,6 +9,8 @@ sidebar_position: 20
 - Écrire un programme **qui ne peut pas être réalisé avec l'héritage de classe seul** (Java interdit l'héritage multiple, plus précisement plusieurs **extends** sur la même classe), mais qui fonctionne **grâce aux interfaces**.  
 - On modélise des **capacités orthogonales** (voler, nager, rouler) que certains robots peuvent cumuler.
 
+---
+
 Durée estimée : 1/2 heure(s)
 
 ## Idée clé

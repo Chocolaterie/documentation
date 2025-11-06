@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 2
 ---
 
 # TP : Gestion dynamique des attributs d’un personnage de jeu en Java
