@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 ---
 
 # TP Store API - Partie 5 Swagger
@@ -21,6 +21,7 @@ Vous êtes libre d’ajouter les commentaires et informations souhaités dans la
 Dependances Swagger: 
 
 ```
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 ```
 
 :::warning Rappel

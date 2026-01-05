@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # TP Store API - Partie 5 Tests
@@ -14,7 +14,19 @@ Dans cette partie, vous allez ajouter les **tests unitaires et fonctionnels** de
 Cela permettra d'avoir une vision globale et une base solide de l'architecture du projet avant d'intégrer la couche BDD.
 
 Pour le moment, vous écrirez vos tests dans le fichier de test **déjà généré par défaut** lors de la création de votre projet Spring.  
-Par exemple, dans la démo, le fichier était : `DemoRestApplicationTests`.
+
+Exemple: 
+```java
+
+@Autowired
+ArticleService articleService;
+
+@Test
+void tests(){
+    assertEquals(articleService.getAll().code, "202");
+    ....
+
+```
 
 ## Consignes
 
