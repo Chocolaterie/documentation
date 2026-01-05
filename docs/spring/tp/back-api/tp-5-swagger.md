@@ -37,4 +37,4 @@ implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
 
 ## Exemple de résultat attendu
 
-![Diagram](../img/tp_05_swagger_result_example.png)
+![Diagram](./img/tp_05_swagger_result_example.png)
