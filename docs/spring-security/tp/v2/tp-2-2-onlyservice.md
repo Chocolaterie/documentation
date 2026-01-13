@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # TP Eni Store API - Partie 2 (Service)
 
-> **Prérequis** : Avoir complété les modules 1 et 2 ainsi que les TP associés.
+> **Prérequis** : Avoir complété les TP associés.
 
 **Durée estimée : 30min**
 

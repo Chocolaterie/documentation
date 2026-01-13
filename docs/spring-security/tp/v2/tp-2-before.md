@@ -2,18 +2,23 @@
 sidebar_position: 2
 ---
 
-# TP Eni Store API - Partie 2
+# TP Eni Store API - Partie 2 (Final)
 
-> **Prérequis** : Avoir complété les modules 1 et 2 ainsi que les TP associés.
+> **Prérequis** : Avoir complété les TP associés.
 
-**Durée estimée : 1h à 2h**
+**Durée estimée : 30min à 1h**
 
 ---
 
 ## Énoncé
 
 L’objectif de ce TP est de mettre en place la gestion des **Articles** dans l’application.  
+
 Vous allez implémenter les éléments suivants :
+
+- **ArticleDAO** : Couche DAO (non abstraite pour l’instant), qui gère les données en mémoire
+
+Pour rappel voici ce qu'on aura à la fin :
 
 - **Article** : Classe métier dans le package **BO**
 - **ArticleDAO** : Couche DAO (non abstraite pour l’instant), qui gère les données en mémoire
@@ -28,41 +33,22 @@ Un article comporte au minimum :
 
 A vous de créer les fonctions DAO mocks selon vos besoins métier.
 
-## Services à implémenter
+### Les fonctions de la DAO
 
-- `getAll()`
-- `getId(id)`
+Je vous propose ces fonctions, mais vous pouvez faire différement:
+
+- `selectAll()`
+- `selectById(id)`
 - `delete(id)`
 - `save(Article)`
 
-### Détails des services et codes retour
+## Pour aller plus loin
 
-#### getAll
-- Réponse : **Code 202** | Data: La liste des articles
+Vous pouvez ajouter le **ResponseEntity** dans le Controller pour encapsuler les codes HTTP 
 
-#### getId
-- Si l’article est trouvé : **Code 202** | Data: L'article trouvé
-- Si l’article n’est pas trouvé : **Code 703** | Data  null
+:::warning CODE HTTP
 
-#### delete
-- Si l’article est supprimé : **Code 202** | Data: null
-- Si l’article n’existe pas : **Code 703** | Data: null
-
-#### save
-- Si l’id n’existe pas :
-    - Création réussie → **Code 202** | Data: L'article crée
-- Si l’id existe déjà :
-    - Mise à jour réussie → **Code 203** | Data: L'article modifié
-
-## Gestion des données
-
-:::warning Attention
-
-Si vous avez pas le temps :
-
-- Pour tester votre API, la couche **Service** peut contenir par défaut une liste de **3 articles**.
+Attention le code HTTP n'est pas le code Métier.
+Donc un code **HTTP 200 ou 202** n'as rien avoir avec un **code métier** inventé **200 ou 202**, c'est deux choses différentes
 
 :::
-
-
-Les opérations de recherche et de filtrage devront utiliser les **`Stream`** et/out **`Predicate`** de Java.
