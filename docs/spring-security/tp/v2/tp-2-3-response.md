@@ -16,7 +16,7 @@ L’objectif de ce TP est de mettre en place la gestion des **Articles** dans l�
 Vous allez modifier les éléments suivants :
 
 - **ArticleService** : Les retours sont plus détaillés. on retournera maintenant (code, message, data)
-Le data est une donnée générique car le type dépend de l'objet (Article ? List<Article> ? Boolean ? etc)
+Le data est une donnée générique car le type dépend de l'objet (Article ? `List<Article>` ? Boolean ? etc)
 
 ### Détails des services et codes retour
 
@@ -25,7 +25,7 @@ Le data est une donnée générique car le type dépend de l'objet (Article ? Li
 - Réponse : **202** | La liste des articles a été récupérée avec succès | **La liste des articles**
 
 #### getId
-- Si l’article est trouvé : **202** | L'article a été récupéré avec succès* | **L'article trouvé**
+- Si l’article est trouvé : **202** | L'article a été récupéré avec succès | **L'article trouvé**
 - Si l’article n’est pas trouvé : **Code 703** | L'article n'existe pas | **null**
 
 #### delete
