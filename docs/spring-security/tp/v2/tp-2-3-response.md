@@ -26,14 +26,14 @@ Le data est une donnée générique car le type dépend de l'objet (Article ? `L
 
 #### getId
 - Si l’article est trouvé : **202** | L'article a été récupéré avec succès | **L'article trouvé**
-- Si l’article n’est pas trouvé : **Code 703** | L'article n'existe pas | **null**
+- Si l’article n’est pas trouvé : **703** | L'article n'existe pas | **null**
 
 #### delete
-- Si l’article est supprimé : **Code 202** | L'article a été supprimé avec succès |  **null**
-- Si l’article n’existe pas : **Code 703** | L'article n'existe pas | **null**
+- Si l’article est supprimé : **202** | L'article a été supprimé avec succès |  **null**
+- Si l’article n’existe pas : **703** | L'article n'existe pas | **null**
 
 #### save
 - Si l’id n’existe pas :
-    - Création réussie → **Code 202** | Article créé avec succès | **L'article crée**
+    - Création réussie → **202** | Article créé avec succès | **L'article crée**
 - Si l’id existe déjà :
-    - Mise à jour réussie → **Code 203** | Article modifié avec succès | **L'article modifié**
+    - Mise à jour réussie → **203** | Article modifié avec succès | **L'article modifié**
