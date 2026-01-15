@@ -14,6 +14,36 @@ Lien de téléchargement : https://www.sonarsource.com/products/sonarqube/downlo
 
 Décompressez-le à l'emplacement souhaité et lancez l'exécutable correspondant à votre plateforme.
 
+## Configurer Java
+
+### Les variables
+
+JAVA_HOME = La racine d'un dossier jdk
+
+Exemple sur intellij il telecharge vos jdk ici : `C:\Users\aschartier\.jdks`
+
+![Screenshot](sonar-path-java-0.png)
+
+![Screenshot](sonar-path-java-1.png)
+
+### Path
+
+Ouvrir le path :
+
+![Screenshot](sonar-path-java-2.png)
+
+Deux choses :
+- Supprimer les versions de java inutilisées (ex: 8,9, 11) si étaient la par défaut
+- Ajouter votre chemin java sdk (mais le bin du dossier )
+![Screenshot](sonar-path-java-3.png)
+
+:::warning Attention
+
+Dans le path c'est le bin du dossier, ex: `D:\Programs\jdk-22.0.2\bin`
+
+:::
+
+## Start
 Par exemple, sous Windows, il faut lancer le script StartSonar.bat situé dans le dossier bin/windows-x86-64.
 
 ```
