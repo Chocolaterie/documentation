@@ -18,6 +18,14 @@ Décompressez-le à l'emplacement souhaité et lancez l'exécutable correspondan
 
 ### Les variables
 
+:::warning Version de Java 22
+
+Attention les dernières versions de sonar ne supporte pas des versions trop anciennes de java
+
+:::
+
+Lien: https://download.oracle.com/java/22/archive/jdk-22.0.2_windows-x64_bin.zip
+
 JAVA_HOME = La racine d'un dossier jdk
 
 Exemple sur intellij il telecharge vos jdk ici : `C:\Users\aschartier\.jdks`
