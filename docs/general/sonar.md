@@ -74,9 +74,24 @@ Il faut créer un projet dans SonarQube pour générer ensuite un **token**, qui
 
 Vous devez télécharger Sonar Scanner, puis il est recommandé de l'ajouter à la variable d'environnement Path de votre système pour pouvoir l'utiliser globalement en ligne de commande.
 
-Lien de téléchargement : https://docs.sonarsource.com/sonarqube/9.7/analyzing-source-code/scanners/sonarscanner/
+https://docs.sonarsource.com/sonarqube-server/9.8/analyzing-source-code/scanners/sonarscanner
 
-En général, l'outil Sonar Scanner se trouve dans le dossier /bin. En spécifiant ce dossier dans la variable Path, vous pourrez utiliser la commande sonar-scanner directement depuis n'importe quel répertoire.
+![Screenshot](sonar-path-java-4.png)
+
+
+En général, l'outil Sonar Scanner se trouve dans le dossier /bin. 
+
+Donc ajouter le path du bin de notre Sonar Scanner dans les variables d'environnements système
+
+![Screenshot](sonar-path-java-5.png)
+
+Pour verifier que c'est reconnu :
+
+```
+sonar-scanner --version
+```
+
+En spécifiant ce dossier dans la variable Path, vous pourrez utiliser la commande sonar-scanner directement depuis n'importe quel répertoire.
 
 ```
 sonar-scanner
@@ -100,12 +115,53 @@ Exemple avec un fichier sonar-project.properties :
 sonar.projectKey=mon-projet
 sonar.sources=src
 sonar.host.url=http://localhost:9000
-sonar.login=monjeton
+sonar.token=monjeton
+
+sonar.java.binaries=build/classes
 ```
 
 - sonar.sources : Le dossier qui contient le code à analyser de manière récursive
 - sonar.login : Le token généré via votre interface d'administration SonarQube
 
+## Exemple projet local Sonar
+
+Dans le dashboard 
+
+![alt text](sonar-path-java-6.png)
+
+
+![alt text](sonar-path-java-7.png)
+
+![alt text](sonar-path-java-8.png)
+
+## Projet Java Gradle
+
+Dans un projet java gradle il faut:
+
+- Ajouter le sonar dans les plugins gradle :
+
+```gradle
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.5.9'
+    ....
+	id "org.sonarqube" version "4.3.1.3277"
+}
+```
+
+- Ajouter les properties sonar dans le gradle (exemple tout à la fin du fichier build.gradle) :
+
+```gradle
+sonar {
+	properties {
+		property "sonar.projectKey", "ma-clé"
+		property "sonar.host.url", "http://localhost:9000"
+		property "sonar.token", "montoken"
+	}
+}
+```
+
+## Conclusion
 Enfin lancer le scan :
 
 ```
