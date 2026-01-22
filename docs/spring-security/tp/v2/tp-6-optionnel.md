@@ -28,5 +28,5 @@ Bien qu’il existe des moyens de configurer plusieurs sources de données, cela
 - Adapter le type de l’**Id** en `Long` (au lieu de `String`).
 - Ajoutez les dépendances **Spring Data JPA** et le **driver MySQL** dans votre `build.gradle`.
 - Configurez votre connexion MySQL dans `application.properties` ou `application.yml`. 
-- 
+
   :::
