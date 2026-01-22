@@ -2,7 +2,7 @@
 sidebar_position: 7
 ---
 
-# TP Eni Store API (Partie 7 - JWT)
+# TP Eni Store API (Partie 7 - JWT 01)
 
 > **Prérequis** : Avoir complété les TP précédents.
 
